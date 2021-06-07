@@ -1,15 +1,29 @@
-header{
+*{
+    box-sizing: border-box;
+}
+header
+    padding:0;
+    margin:0;
    background-color: antiquewhite;
-    text-align: center;
     position: fixed;
     width: 100%;
     z-index: 999%;
+    top: 0%;
 } 
 
 .logo{
+    position:relative;
     padding: 0;
     margin: 0;
-    width: 3rem
+    width: 40px;
+
+    top: 4px;
+    right:0;
+    
+    
+    
+    
+    
     
 }
 
@@ -17,10 +31,13 @@ nav{
     position: absolute;
     text-align: left;
     top:100%;
-    left: 70%;
+    left: 0;
     background-color:azure;
-    width: 100%;
     display: none;
+    width: 100%;
+    transform:scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
     
 }
 
@@ -42,22 +59,57 @@ nav a{
     font-size: 1.5em;
     text-transform:uppercase;
     text-decoration: none;
+    opacity:0;
+    
 }
 
 nav a:hover{
     color: black;
 }
 
-nav-toggle{
+.nav-toggle{
     display:none;
 }
 
 .nav-toggle:checked ~ nav{
-    display:block;
+    transform:scale(1,1)
+    
 }
 
 .nav-toggle-label{
     position: absolute;
-    top:0;
-    right: 4%;
+    top:14px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    margin-left:1em;
+}
+
+.nav-toggle-label span,.nav-toggle-label::before,
+.nav-toggle-label::after{
+display:block;
+background: black;
+height: 2px;
+width: 2em;
+}
+
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+     content:'';
+     position: absolute;
+}
+
+.nav-toggle-label::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label::after{
+    top:7px;
+}
+
+h1{
+    
+}
+section{
+    
 }
