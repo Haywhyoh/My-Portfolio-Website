@@ -1,34 +1,49 @@
 *{
     box-sizing: border-box;
 }
-header
-    padding:0;
+
+body{
+    width: 100vw;
+    padding: 10vw;
+    margin: 0;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+header{
     margin:0;
-   background-color: antiquewhite;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
     position: fixed;
     width: 100%;
+    height: 13vw;
     z-index: 999%;
     top: 0%;
+    left: 0;
 } 
 
 .logo{
     position:relative;
-    padding: 0;
+    padding-left: 10vw;
     margin: 0;
-    width: 40px;
+    width: 30vw;
+    height:8vw;
+    top: 0.8em;
 
-    top: 4px;
     right:0;
-    
-    
-    
-    
-    
     
 }
 
+.iconify{
+    position: relative;
+    top: 0.2em;
+    padding: 0;
+    margin:0;
+    right: -45vw;
+}
+
 nav{
-    position: absolute;
+    position: relative;
     text-align: left;
     top:100%;
     left: 0;
@@ -67,49 +82,104 @@ nav a:hover{
     color: black;
 }
 
-.nav-toggle{
-    display:none;
-}
 
-.nav-toggle:checked ~ nav{
-    transform:scale(1,1)
-    
-}
-
-.nav-toggle-label{
-    position: absolute;
-    top:14px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    margin-left:1em;
-}
-
-.nav-toggle-label span,.nav-toggle-label::before,
-.nav-toggle-label::after{
-display:block;
-background: black;
-height: 2px;
-width: 2em;
-}
-
-.nav-toggle-label::before,
-.nav-toggle-label::after{
-     content:'';
-     position: absolute;
-}
-
-.nav-toggle-label::before{
-    bottom: 7px;
-}
-
-.nav-toggle-label::after{
-    top:7px;
-}
 
 h1{
+    font-size: 6vw;
+    margin-bottom: 8px;
+}
+
+.main{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(132, 113, 201, 0.35) 0%, rgba(132, 113, 201, 0) 100%);
+    width: 95%;
+    margin-top: 3vh;;
+    padding: 0;
+    
+
+}
+
+.main img{
+   width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+.name{
+    font-size:8vw;
+    padding: 0;
+    margin:0;
+    width: 100%
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+
+
+
+color: #004EFF;
+}
+
+.description{
+    font-size: 9vw;
+    margin-top: 2vh;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.description2{
+    font-size:4vw;
+    font-family: Vollkorn;
+font-style: normal;
+font-weight: normal;
+padding: 0;
+    margin:0;
+}
+
+.buttons{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: -3vh
     
 }
-section{
+
+button{
+width: 120px;
+margin: 0 0 0 8%;
+display: flex:
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+background: #34A853;
+border: 2px solid #FFFFFF;
+box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 40px;
+}
+
+.what-I-do{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    margin:0;
     
+}
+
+ .skill-card{
+     font: Serif;
+     font-size: 3vw;
+     margin-top: 3vh;
+     padding: 3vw;
+     width:40vw;
+     text-align: center;
+     background-color: darkgrey;
+     border-radius: 40px;
+     height: 13rem;
+     
 }
