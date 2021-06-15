@@ -1,8 +1,10 @@
 *{
     box-sizing: border-box;
+    
 }
 
 body{
+    font-family: Vollkorn;
     width: 100vw;
     padding: 10vw;
     margin: 0;
@@ -89,6 +91,18 @@ h1{
     margin-bottom: 8px;
 }
 
+.name-container{
+    display: flex;
+    flex-direction: row;
+}
+.line{
+border: 1px solid #000000;
+    width: 30vw;
+    padding: 0;
+    margin: 0;
+
+}
+
 .main{
     background: radial-gradient(50% 50% at 50% 50%, rgba(132, 113, 201, 0.35) 0%, rgba(132, 113, 201, 0) 100%);
     width: 95%;
@@ -110,8 +124,7 @@ h1{
     margin:0;
     width: 100%
     font-family: PT Serif;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
 
 
 
@@ -180,6 +193,31 @@ border-radius: 40px;
      text-align: center;
      background-color: darkgrey;
      border-radius: 40px;
-     height: 13rem;
+     border-style: groove;
+     
      
 }
+
+.ayo{
+    width: 30vw;
+}
+
+.skills{
+    width:100%;
+}
+.skills-contents{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.tech-cards{
+    text-align: center;
+    padding: 2vw;
+    font-size: 3vw;
+    font-weight: bold;
+    width:20vw;
+    border-style: double;
+    margin: 1.5vw;
+}
+
