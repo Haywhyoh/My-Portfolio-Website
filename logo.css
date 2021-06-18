@@ -9,8 +9,6 @@ body{
     padding: 10vw;
     margin: 0;
     font-size: 10px;
-    display: flex;
-    flex-direction: column;
 }
 header{
     margin:0;
@@ -47,18 +45,18 @@ header{
 nav{
     position: relative;
     text-align: left;
-    top:100%;
+    top:20%;
     left: 0;
     background-color:azure;
-    display: none;
     width: 100%;
-    transform:scale(1,0);
+    height: 30vh;
     transform-origin: top;
     transition: transform 400ms ease-in-out;
-    
+
 }
 
 nav ul{
+    font-size: 3vw;
     margin: 0;
     padding:0;
     list-style: none;
@@ -76,7 +74,7 @@ nav a{
     font-size: 1.5em;
     text-transform:uppercase;
     text-decoration: none;
-    opacity:0;
+  
     
 }
 
@@ -86,9 +84,9 @@ nav a:hover{
 
 
 
-h1{
+.main h1{
     font-size: 6vw;
-    margin-bottom: 8px;
+    margin-bottom: 1.5vw;
 }
 
 .name-container{
@@ -96,18 +94,19 @@ h1{
     flex-direction: row;
 }
 .line{
-border: 1px solid #000000;
-    width: 30vw;
-    padding: 0;
-    margin: 0;
+border-bottom: 2px solid #000000;
+    width: 34vw;
+    padding:0;
+    margin:0  0 3vw 1vw ;
 
 }
 
 .main{
-    background: radial-gradient(50% 50% at 50% 50%, rgba(132, 113, 201, 0.35) 0%, rgba(132, 113, 201, 0) 100%);
+   
     width: 95%;
     margin-top: 3vh;;
     padding: 0;
+
     
 
 }
@@ -119,23 +118,19 @@ border: 1px solid #000000;
 }
 
 .name{
-    font-size:8vw;
+    font-size:10vw;
     padding: 0;
     margin:0;
-    width: 100%
     font-family: PT Serif;
     font-weight: bolder;
-
-
-
-color: #004EFF;
+    color: #004EFF;
 }
 
 .description{
-    font-size: 9vw;
-    margin-top: 2vh;
+    font-size: 6vw;
+    margin: 3vw 0 3vw 0;
     padding: 0;
-    margin-bottom: 0;
+
 }
 
 .description2{
@@ -148,26 +143,24 @@ padding: 0;
 }
 
 .buttons{
-    margin: 0;
+    
     padding: 0;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    position: relative;
-    top: -3vh
+
+
     
 }
 
 button{
-width: 120px;
+width: 40vw;
 margin: 0 0 0 8%;
 display: flex:
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 10px;
-background: #34A853;
+padding: 3vw;
 border: 2px solid #FFFFFF;
 box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 40px;
@@ -219,5 +212,258 @@ border-radius: 40px;
     width:20vw;
     border-style: double;
     margin: 1.5vw;
+}
+
+.about-me {
+    font-size: 4vw;
+    
+}
+.tech-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tech-list li{
+    padding: 2vw;
+}
+
+.tech-list li::before{
+    content:'\2192';
+    font-size: 1vw;
+    position: relative;
+    bottom:5px
+
+    
+    
+
+}
+
+
+@media screen and (min-width: 500px){
+    
+ body{
+     padding: 0;
+    font-family: Vollkorn;
+    font-size: 5px;
+    display: flex;
+    flex-direction: column;
+}
+    
+header{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    height: 60px;
+    box-shadow: none;
+} 
+    
+.iconify{
+    display:none;
+    }
+
+.logo{
+    left: 0;
+    position: fixed;
+    padding: 0 ;
+    margin: 0 10vw 0 5vw;
+    width: 50px;
+    
+}
+    nav{
+        height: 0;
+        width: 100%;
+    }
+
+
+nav ul{
+    position: fixed;
+    margin: 0 ;
+    padding:0;
+    overflow: hidden;
+    list-style: none;
+   right: 0;
+}
+
+nav li{
+    float: left;
+    padding: 0;
+    
+    
+}
+
+nav a{
+   display: block;
+    text-transform:uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 2vw;
+    
+}
+
+nav a:hover{
+    color: black;
+}
+
+
+
+.main h1{
+    margin: 0 0 10px 0;
+    font-size: 2vw;
+
+}
+
+.name-container{
+    display: flex;
+    flex-direction: row;
+}
+.line{
+border-bottom: 2px solid #000000;
+    width: 34vw;
+    padding:0;
+    margin:0  0 3vw 1vw ;
+
+}
+
+.main{
+    margin: 60px 5vw 0 5vw  ;
+    width: 100vw;
+    padding: 0;
+
+    
+
+}
+
+.pix1{
+    position: relative;
+    top: 10%;
+    margin: 0;
+    padding: 0;
+    right:0;
+}
+
+.name{
+    font-size:4vw;
+    padding: 0;
+    margin:0;
+    font-weight: bolder;
+    color: #004EFF;
+}
+
+.description{
+    font-size: 4vw;
+    margin: 1vw 0 1vw 0;
+    padding: 0;
+    width: 50%;
+
+}
+
+.description2{
+    font-size:3vw;
+padding: 0;
+    margin:0;
+    width: 50%
+}
+
+.buttons{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+    
+}
+
+button{
+width: 20vw;
+margin: 0 0 0 8%;
+display: flex:
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3vw;
+border: 2px solid #FFFFFF;
+box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 40px;
+}
+
+.what-I-do{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    margin:0;
+    
+}
+
+ .skill-card{
+     font: Serif;
+     font-size: 3vw;
+     margin-top: 3vh;
+     padding: 3vw;
+     width:40vw;
+     text-align: center;
+     background-color: darkgrey;
+     border-radius: 40px;
+     border-style: groove;
+     
+     
+}
+
+.ayo{
+    width: 30vw;
+}
+
+.skills{
+    width:100%;
+}
+.skills-contents{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.tech-cards{
+    text-align: center;
+    padding: 2vw;
+    font-size: 3vw;
+    font-weight: bold;
+    width:20vw;
+    border-style: double;
+    margin: 1.5vw;
+}
+
+.about-me {
+    font-size: 4vw;
+    
+}
+.tech-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tech-list li{
+    padding: 2vw;
+}
+
+.tech-list li::before{
+    content:'\2192';
+    font-size: 1vw;
+    position: relative;
+    bottom:5px
+
+    
+    
+
 }
 
