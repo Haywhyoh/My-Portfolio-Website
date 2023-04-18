@@ -1,0 +1,38 @@
+[
+  {
+    "id":1,
+    "imageUrl":"project1",
+    "category":"FrontEnd",
+    "title":"SaaS Website"
+  },
+  {
+    "id":2,
+    "imageUrl":"project2",
+    "category":"WordPress",
+    "title":"Portfolio"
+  },
+  {
+    "id":3,
+    "imageUrl":"project3",
+    "category":"FullStack",
+    "title":"Free Udemy"
+  },
+  {
+    "id":4,
+    "imageUrl":"project4",
+    "category":"FrontEnd",
+    "title":"Real Estate Landing Page"
+  },
+  {
+    "id":5,
+    "imageUrl":"project5",
+    "category":"Backend",
+    "title":"FileManager"
+  },
+  {
+    "id":6,
+    "imageUrl":"project6",
+    "category":"FullStack",
+    "title":"FrontEnd"
+  }
+]
