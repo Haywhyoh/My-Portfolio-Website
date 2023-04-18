@@ -3,8 +3,9 @@ import hand from './assets/images/hand.png';
 import myPic from './assets/images/myPic.png';
 import picBg from './assets/images/7.png';
 import Service from './components/Service';
-import service_list from './data/services.json';
-
+import ProjectCard from './components/ProjectCard';
+import serviceList from './data/services.json';
+import projects from './data/projectCard.json';
 function App () {
   return (
     <div className=' h-fit w-screen bg-[url("./src/assets/images/banner.jpeg")] font-body bg-cover' >
@@ -28,7 +29,7 @@ function App () {
         </div>
         <div>
           <div>
-            {service_list.map(service => (
+            {serviceList.map(service => (
               <Service
                 key={service.id}
                 {...service}
@@ -48,7 +49,16 @@ function App () {
         <div className='border-white w-full border-b-2'></div>
         <div className='text-white text-6xl font-bold py-5 text-center py-10' > 98% <br></br><span className='text-2xl'>Positive Rating</span></div>
       </section>
-
+      <section>
+                <div>
+                  {projects.map(project => (
+                    <ProjectCard
+                      key={project.id}
+                      {...project}
+                    />
+                  ))}
+                </div>
+      </section>
     </div>
   );
 }
