@@ -1,7 +1,7 @@
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 
 export default function ProjectCard (props) {
-  function getAway () {
+  function showDetail () {
     const cardList = document.querySelectorAll('.projectDetail');
     const length = cardList.length;
     const card = cardList[props.id - 1];
@@ -20,7 +20,7 @@ export default function ProjectCard (props) {
   }
   return (
     <div>
-      <div onClick={getAway}><img className='relative' src={`../src/assets/images/${props.imageUrl}.jpeg`} alt='' /></div>
+      <div onClick={showDetail}><img className='relative' src={`../src/assets/images/${props.imageUrl}.jpeg`} alt='' /></div>
       <div className='relative text-white text-md bg-dark_blue w-full py-3 px-5 bottom-5 projectDetail flex justify-between invisible'>
         <div>
           <div className='opacity-80 font-bold'>{props.title}</div>
