@@ -23,6 +23,9 @@ export default {
       'black_bg': '#012b45',
       'dark_blue': '#040836',
       'layout_black': 'rgba(0, 0, 0, 0.2)',
+      'layout_black2': 'rgba(0, 0, 0, 0.5)',
+      'upwork': '#6fda44',
+      'fiverr': '#1dbf73'
     },
    
     extend: {
