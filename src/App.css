@@ -14,3 +14,22 @@
   display: inline-block;
   font-size: 20px;
 }
+
+#myPic::after {
+  position: absolute;
+  left: 50%;
+  bottom: -120px;
+  transform: translateX(-50%);
+  content:" ";
+  background: url('./assets/images/redBg.png');
+  border-radius: 50%;
+  background-size: contain;
+  z-index: -1;
+}
+
+#review::after {
+  content: " - Remember this";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
