@@ -8,10 +8,12 @@ import ProjectCard from './components/ProjectCard';
 import serviceList from './data/services.json';
 import projects from './data/projectCard.json';
 import { SlLocationPin } from 'react-icons/sl';
-import { FaWordpress, FaReact, FaNodeJs, FaPython, FaLinux, FaHtml5, FaCss3Alt, FaBootstrap, FaUserEdit, FaRegCalendarAlt } from 'react-icons/fa';
+import { FaWordpress, FaReact, FaNodeJs, FaPython, FaHeadphonesAlt, FaLinux, FaHtml5, FaCss3Alt, FaBootstrap, FaUserEdit, FaRegCalendarAlt } from 'react-icons/fa';
 import { SiUpwork, SiFiverr, SiFlask, SiMongodb, SiExpress, SiMinutemailer, SiJavascript, SiTypescript, SiNginx, SiMysql, SiPostgresql, SiTailwindcss, SiAmazonaws, SiFigma, SiWix, SiElementor } from 'react-icons/si';
 import FormInput from './components/FormInput';
 function App () {
+  const d = new Date();
+  const year = d.getFullYear();
   const [values, setValues] = useState({
     fullName: '',
     companyName: '',
@@ -116,28 +118,30 @@ function App () {
           One of my specialties is taking an idea from scratch and creating a full-fledged platform.
           I go beyond to produce sites with a unique.
         </p>
-        <div className='flex flex-col justify-center gap-y-10'>
+        <div className='flex flex-col justify-center gap-y-10 py-10'>
           <div>
             <div className='text-6xl m-0 text-upwork'><SiUpwork className=' inline-block' /></div>
             <h2 className='font-bold text-xxl '>Professional Wordpress and MERN Delover</h2>
             <p className='opacity-60 font-semibold'>Top Rated Freelancer - Upwork</p>
           </div>
+          <div className='border-white w-full border-b-2 opacity-60' />
+
           <div>
-            <SiFiverr className='text-8xl rounded-full bg-fiverr p-4 inline-block' />
+            <SiFiverr className='text-8xl rounded-full bg-fiverr p-2 inline-block' />
             <h2 className='font-bold text-xxl py-2'>Professional Technical Writer and Wordpress Developer</h2>
             <p className='opacity-60 font-semibold'>Level 2 Freelancer - Fiverr</p>
           </div>
 
         </div>
       </section>
-      <section className='text-center container'>
-        <div className='sub_title font-bold py-5'>Skills and Technologies </div>
-        <div className='flex flex-wrap gap-y-5 '>
-          <button className='bg-red  rounded-full  px-10 py-4 '>
+      <section className='text-center container py-5'>
+        <div className='sub_title font-bold py-5 '>Skills and Technologies </div>
+        <div className='flex flex-wrap gap-y-5 py-5 flex flex-col justify-center '>
+          <button className='bg-red  rounded-full  px-12 py-4 '>
             <div className='font-bold text-md'>FrontEnd Development</div>
           </button>
-          <button className='bg-layout_black2 rounded-full  px-10 py-4'> <div className='font-bold text-md'>BackEnd Development</div></button>
-          <button className='bg-layout_black2 rounded-full  px-16 py-4'> <div className='font-bold text-md'>Website Design</div></button>
+          <button className='bg-layout_black2 rounded-full  px-14 py-4'> <div className='font-bold text-md'>BackEnd Development</div></button>
+          <button className='bg-layout_black2 rounded-full  px-20 py-4'> <div className='font-bold text-md'>Website Design</div></button>
         </div>
         <div className='flex flex-wrap gap-8'>
           <div className='flex flex-wrap gap-5 border justify-center text-center border-white p-4 bg-black_bg'>
@@ -255,29 +259,33 @@ function App () {
           </form>
         </div>
       </section>
-      <section className='container'>
-        <div className='text-center'>
-          <div className='text-6xl rounded-md bg-blue w-24 mx-auto'><SiMinutemailer className='inline-block p-3 text-8xl' /></div>
+      <section className='container flex flex-col gap-y-10 py-20'>
+        <div className='text-center '>
+          <div className='text-3xl rounded-md bg-blue w-fit mx-auto'><SiMinutemailer className='inline-block p-3 text-6xl' /></div>
           <div className='py-2'>OUR EMAIL</div>
           <div className='font-bold text-lg'>adefeyisayo998@gmail.com</div>
           <div className='font-bold text-lg'>haywhyoh998@gmail.com</div>
 
         </div>
         <div className='text-center'>
-          <div className='text-6xl rounded-md bg-blue w-24 mx-auto'><SiMinutemailer className='inline-block p-3 text-8xl' /></div>
-          <div className='py-2'>OUR EMAIL</div>
-          <div className='font-bold text-lg'>adefeyisayo998@gmail.com</div>
-          <div className='font-bold text-lg'>haywhyoh998@gmail.com</div>
+          <div className='text-3xl rounded-md bg-red w-fit mx-auto'><SlLocationPin className='inline-block p-3 text-6xl' /></div>
+          <div className='py-2'>My Location</div>
+          <div className='font-bold text-lg'>Lagos, Nigeria</div>
+          <div className='font-bold text-lg'>West Africa</div>
 
         </div>
         <div className='text-center'>
-          <div className='text-6xl rounded-md bg-blue w-24 mx-auto'><SiMinutemailer className='inline-block p-3 text-8xl' /></div>
+          <div className='text-3xl rounded-md bg-yellow w-fit mx-auto'><FaHeadphonesAlt className='inline-block p-3 text-6xl' /></div>
           <div className='py-2'>OUR EMAIL</div>
-          <div className='font-bold text-lg'>adefeyisayo998@gmail.com</div>
-          <div className='font-bold text-lg'>haywhyoh998@gmail.com</div>
+          <div className='font-bold text-lg'>+234-8142064474</div>
 
         </div>
       </section>
+      <footer className='bg-black_bg '>
+        <div className='p-10 opacity-60 '>
+          Copyright <span className='px-1'>{year}</span> Adedayo Samuel. Inspiration from Ambrox
+        </div>
+      </footer>
     </div>
   );
 }
