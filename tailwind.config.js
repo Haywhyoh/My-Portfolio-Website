@@ -25,7 +25,8 @@ export default {
       'layout_black': 'rgba(0, 0, 0, 0.2)',
       'layout_black2': 'rgba(0, 0, 0, 0.5)',
       'upwork': '#6fda44',
-      'fiverr': '#1dbf73'
+      'fiverr': '#1dbf73',
+      'black_text': '#202942'
     },
    
     extend: {
