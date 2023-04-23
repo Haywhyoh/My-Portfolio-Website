@@ -1,5 +1,7 @@
 import './App.css';
-import { useState } from 'react';
+import 'animate.css';
+import { useState, useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 import Nav from './components/Nav';
 import hand from './assets/images/hand.png';
 import myPic from './assets/images/myPic.png';
@@ -13,6 +15,26 @@ import { FaWordpress, FaReact, FaNodeJs, FaPython, FaHeadphonesAlt, FaLinux, FaH
 import { SiUpwork, SiFiverr, SiFlask, SiMongodb, SiExpress, SiMinutemailer, SiJavascript, SiTypescript, SiNginx, SiMysql, SiPostgresql, SiTailwindcss, SiAmazonaws, SiFigma, SiWix, SiElementor } from 'react-icons/si';
 import FormInput from './components/FormInput';
 function App () {
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['FullStack Engineer', 'Technical Writer', 'BackEnd Engineer', 'WordPress Developer', 'Software Engineer'], // Strings to display
+      // Speed settings, try diffrent values untill you get good results
+      startDelay: 300,
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 100,
+      loop: true,
+      loopCount: Infinity
+    });
+
+    // Destropying
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   const d = new Date();
   const year = d.getFullYear();
   const [values, setValues] = useState({
@@ -59,27 +81,30 @@ function App () {
     <div>
       <Nav />
       <div className='pt-36 h-fit w-screen font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white'>
-        <section className='container text-center'>
-          <div className='py-10'>
-            <h2 className='text-4xl font-extrabold flex gap-x-3 py-4'>Hi <img className='w-10' src={hand} /> I'm Samuel</h2>
-            <div className='text-2xl font-bold'>FullStack Engineer</div>
-            <div className='pt-9'><button className='bg-dark_blue px-10 py-4 rounded-3xl font-bold text-xl'>My Resume</button></div>
+        <section className='container text-center md:flex md:flex-col '>
+          <div className='py-10 md:text-center md:flex md:flex-col md:justify-center md:gap-8'>
+            <div>
+              <div className='text-center md:mx-auto md:flex md:justify-center'><div className='text-4xl font-extrabold flex gap-x-3 py-4 md:text-7xl'>Hi <img className='w-10 md:16' src={hand} /> I'm Samuel</div></div>
+              <span className='text-2xl md:text-4xl font-bold' ref={el} />
+            </div>
+
+            <div className='pt-9'><button className='bg-dark_blue px-10 py-4 rounded-3xl font-bold text-xl md:mb-10'>My Resume</button></div>
           </div>
-          <div className='relative h-fit'>
-            <img src={myPic} className='absolute w-80 z-40 buttom-30' />
-            <img className=' w-96 h-80 absolute -top-8 ' src={picBg} />
+          <div className='relative h-fit md:w-full'>
+            <img src={myPic} className='absolute w-80 z-20 buttom-30 md:w-2/3 md:left-32' />
+            <img className=' w-96 h-80 absolute -top-8 md:w-2/3 md:left-32' src={picBg} />
           </div>
         </section>
 
-        <section className='text-center bg-layout_black mt-64 container'>
-          <div className='py-4'><h2 className='sub_title font-bold'>My Expertise</h2></div>
-          <div className='py-5'><h2 className=' font-bold text-4xl'>What I Do</h2></div>
+        <section className='text-center bg-layout_black mt-64 container md:mt-96'>
+          <div className='py-4'><h2 className='sub_title font-bold md:text-2xl md:pt-10'>My Expertise</h2></div>
+          <div className='py-5'><h2 className=' font-bold text-4xl md:text-6xl'>What I Do</h2></div>
           <div className='flex gap-1 justify-center '>
-            <div className=' w-3 border-b-4 border-red ' />
-            <div className=' w-20 border-b-4 border-red ' />
+            <div className=' w-3 border-b-4 opacity-60 border-red ' />
+            <div className=' w-20 border-b-4 opacity-60 border-red ' />
           </div>
-          <div className='py-5'>
-            <div>
+          <div className='py-5 md:pt-20'>
+            <div className='md:flex md:gap-10 md:flex-wrap'>
               {serviceList.map(service => (
                 <Service
                   key={service.id}
@@ -89,19 +114,22 @@ function App () {
             </div>
           </div>
         </section>
-        <section className=' text-center py-10 container '>
-          <div><h2 className='sub_title font-bold'>Recent Work</h2></div>
-          <div className=' text-4xl font-bold py-5'> Look at my portfolio and give a feedback</div>
-          <div className=' text-5xl font-bold py-5'> 10 <br /> <span className=' font-medium text-2xl'>Completed Projects</span></div>
-          <div className=' text-5xl font-bold py-5'> 150+ <br /><span className='font-medium text-2xl'>Tech Articles</span></div>
+        <section className=' text-center py-10 container'>
+          <div><h2 className='sub_title font-bold md:text-2xl md:pt-10'>Recent Work</h2></div>
+          <div className=' text-4xl font-bold py-5 md:text-6xl'> Look at my portfolio and give a feedback</div>
+          <div className='md:flex md:items-center md:gap-5 md:justify-center '>
+            <div className=' text-5xl font-bold py-5'> 10 <br /> <span className=' font-medium text-2xl  md:text-xl'>Completed Projects</span></div>
+            <div className=' text-5xl font-bold py-5'> 150+ <br /><span className='font-medium text-2xl  md:text-xl'>Tech Articles</span></div>
+            <div className='md:flex md:items-center md:gap-5'>
+              <div className='border-white w-full border-b-2 md:border-e md:h-20 md:border-b-0 ' />
+              <div className=' text-6xl font-bold py-5 text-center'>98%<br /><span className='font-medium text-2xl md:text-xl w-40'>Positive Rating</span></div>
+            </div>
+          </div>
 
         </section>
-        <section className=' container'>
-          <div className='border-white w-full border-b-2' />
-          <div className=' text-6xl font-bold py-5 text-center py-12'> 98% <br /><span className='text-2xl'>Positive Rating</span></div>
-        </section>
+
         <section className='container'>
-          <div>
+          <div className='md:flex md:flex-wrap gap-10'>
             {projects.map(project => (
               <ProjectCard
                 key={project.id}
