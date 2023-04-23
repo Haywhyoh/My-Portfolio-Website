@@ -19,9 +19,9 @@ export default function ProjectCard (props) {
     }
   }
   return (
-    <div>
+    <div className='md:w-80 md:relative'>
       <div onClick={showDetail}><img className='relative' src={`../src/assets/images/${props.imageUrl}.jpeg`} alt='' /></div>
-      <div className='relative text-white text-md bg-dark_blue w-full py-3 px-5 bottom-5 projectDetail flex justify-between invisible'>
+      <div className='relative md:absolute md:bottom-0 text-white text-md bg-dark_blue w-full py-3 px-5 bottom-5 projectDetail flex justify-between invisible'>
         <div>
           <div className='opacity-80 font-bold'>{props.title}</div>
           <div className='opacity-50 font-bold'>{props.category}</div>
