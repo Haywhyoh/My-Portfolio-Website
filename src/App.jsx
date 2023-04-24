@@ -80,14 +80,14 @@ function App () {
   return (
     <div>
       <Nav />
-      <div className='pt-36 h-fit w-screen font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white'>
+      <div className='pt-36 h-fit w-full font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white'>
+
         <section className='container text-center md:flex md:flex-col '>
           <div className='py-10 md:text-center md:flex md:flex-col md:justify-center md:gap-8'>
             <div>
               <div className='text-center md:mx-auto md:flex md:justify-center'><div className='text-4xl font-extrabold flex gap-x-3 py-4 md:text-7xl'>Hi <img className='w-10 md:16' src={hand} /> I'm Samuel</div></div>
               <span className='text-2xl md:text-4xl font-bold' ref={el} />
             </div>
-
             <div className='pt-9'><button className='bg-dark_blue px-10 py-4 rounded-3xl font-bold text-xl md:mb-10'>My Resume</button></div>
           </div>
           <div className='relative h-fit md:w-full'>
@@ -114,6 +114,7 @@ function App () {
             </div>
           </div>
         </section>
+
         <section className=' text-center py-10 container'>
           <div><h2 className='sub_title font-bold md:text-2xl md:pt-10'>Recent Work</h2></div>
           <div className=' text-4xl font-bold py-5 md:text-6xl'> Look at my portfolio and give a feedback</div>
@@ -138,13 +139,17 @@ function App () {
             ))}
           </div>
         </section>
+
         <section className='container'>
-          <img src='../src/assets/images/myPic.png' className='mx-auto w-60 ' />
+          <div className='flex justify-center mx-auto'>
+            <img src='../src/assets/images/myPic.png' className=' w-60 md:w-96 md:mt-32' />
+
+          </div>
         </section>
         <section className='container text-center'>
-          <h2 className='sub_title font-bold py-5'>About Me</h2>
-          <h2 className='text-4xl font-bold'>I can help you develop and maintain your Websites and softwares</h2>
-          <p className='py-5 font-medium text-lg'> Hi, my name is Adedayo Samuel and I began using WordPress when it first began.
+          <h2 className='sub_title font-bold py-5 md:text-2xl'>About Me</h2>
+          <h2 className='text-4xl font-bold md:mx-20'>I can help you develop and maintain your Websites and softwares</h2>
+          <p className='py-5 font-medium text-lg md:mx-20 md:pt-10'> Hi, my name is Adedayo Samuel and I began using WordPress when it first began.
             I’ve spent most of my waking hours for the last ten years designing, programming and operating WordPress sites.
             One of my specialties is taking an idea from scratch and creating a full-fledged platform.
             I go beyond to produce sites with a unique.
@@ -152,56 +157,67 @@ function App () {
           <div className='flex flex-col justify-center gap-y-10 py-10'>
             <div>
               <div className='text-6xl m-0 text-upwork'><SiUpwork className=' inline-block' /></div>
-              <h2 className='font-bold text-xxl '>Professional Wordpress and MERN Delover</h2>
+              <h2 className='font-bold text-xl '>Professional Wordpress and MERN Delover</h2>
               <p className='opacity-60 font-semibold'>Top Rated Freelancer - Upwork</p>
             </div>
-            <div className='border-white w-full border-b-2 opacity-60' />
+            <div className='border-white w-full border-b-2 opacity-40' />
 
             <div>
               <SiFiverr className='text-8xl rounded-full bg-fiverr p-2 inline-block' />
-              <h2 className='font-bold text-xxl py-2'>Professional Technical Writer and Wordpress Developer</h2>
+              <h2 className='font-bold text-xl py-2'>Professional Technical Writer and Wordpress Developer</h2>
               <p className='opacity-60 font-semibold'>Level 2 Freelancer - Fiverr</p>
             </div>
-
           </div>
         </section>
+
         <section className='text-center container py-5'>
           <div className='sub_title font-bold py-5 '>Skills and Technologies </div>
-          <div className='flex flex-wrap gap-y-5 py-5 flex flex-col justify-center '>
-            <button className='bg-red  rounded-full  px-12 py-4 '>
-              <div className='font-bold text-md'>FrontEnd Development</div>
-            </button>
-            <button className='bg-layout_black2 rounded-full  px-14 py-4'> <div className='font-bold text-md'>BackEnd Development</div></button>
-            <button className='bg-layout_black2 rounded-full  px-20 py-4'> <div className='font-bold text-md'>Website Design</div></button>
-          </div>
-          <div className='flex flex-wrap gap-8'>
-            <div className='flex flex-wrap gap-5 border justify-center text-center border-white p-4 bg-black_bg'>
-              <div className='text-xl m-0 '><FaReact className='inline-block text-3xl' /><div>React</div></div>
-              <div className='text-xl m-0 '><SiJavascript className='inline-block text-3xl' /><div>JavaScript</div></div>
-              <div className='text-xl m-0 '><FaCss3Alt className='inline-block text-3xl' /><div>CSS3</div></div>
-              <div className='text-xl m-0 '><FaHtml5 className='inline-block text-3xl' /><div>HTML</div></div>
-              <div className='text-xl m-0 '><SiTailwindcss className='inline-block text-3xl' /><div>TailWind</div></div>
-              <div className='text-xl m-0 '><FaBootstrap className='inline-block text-3xl' /><div>Bootstrap</div></div>
-              <div className='text-xl m-0 '><SiTypescript className='inline-block text-3xl' /><div>TypeScript</div></div>
+          <div className='md:relative'>
+            <div className='flex flex-wrap gap-y-5 py-5 flex-col justify-center md:flex-row md:w-full md:gap-x-20 md:bg-black_bg md:rounded-full md:border md:border-white md:border-opacity-30 md:absolute md:-top-16'>
+              <div>
+                <button className='bg-red  rounded-full  px-12 py-4 '>
+                  <div className='font-bold text-md md:text-2xl'>Skills</div>
+                </button>
+              </div>
+              <div>
+                <button className='bg-layout_black2 rounded-full  px-14 py-5 md:px-12'> <div className='font-bold text-md'>Experience</div></button>
+              </div>
+
             </div>
-            <div className='flex flex-wrap gap-5 border justify-center text-center border-white p-4 bg-black_bg '>
-              <div><FaNodeJs /><div>Node</div></div>
-              <div className='text-xl m-0 '><FaLinux className='inline-block text-3xl' /><div>Linux</div></div>
-              <div className='text-xl m-0 '><FaPython className='inline-block text-3xl' /><div>Python</div></div>
-              <div className='text-xl m-0 '><SiExpress className='inline-block text-3xl' /><div>Express</div></div>
-              <div className='text-xl m-0 '><SiFlask className='inline-block text-3xl' /><div>Flask</div></div>
-              <div className='text-xl m-0 '><SiMysql className='inline-block text-3xl' /><div>MySQL</div></div>
-              <div className='text-xl m-0 '><SiMongodb className='inline-block text-3xl' /><div>MongoDB</div></div>
-              <div className='text-xl m-0 '><SiNginx className='inline-block text-3xl' /><div>NginX</div></div>
-              <div className='text-xl m-0 '><SiPostgresql className='inline-block text-3xl' /><div>PostgreSQL</div></div>
-              <div className='text-xl m-0 '><SiAmazonaws className='inline-block text-3xl' /><div>AmazonAWS</div></div>
-              <div className='text-xl m-0 '><SiTypescript className='inline-block text-3xl' /><div>TypeScript</div></div>
-            </div>
-            <div className='flex flex-wrap gap-5 border justify-center text-center border-white p-4 bg-black_bg'>
-              <div className='text-xl m-0 '><FaWordpress className='inline-block text-3xl' /><div>Wordpress</div></div>
-              <div className='text-xl m-0 '><SiFigma className='inline-block text-3xl' /><div>Figma</div></div>
-              <div className='text-xl m-0 '><SiWix className='inline-block text-3xl' /><div>Wix</div></div>
-              <div className='text-xl m-0 '><SiElementor className='inline-block text-3xl' /><div>Elementor</div></div>
+            <div className='flex flex-wrap gap-8  '>
+              <div className='border  border-white p-4 bg-black_bg border-opacity-30 md:pt-20'>
+                <div className='text-4xl font-bold p-5'>FrontEnd Technologies</div>
+                <div className='flex flex-wrap gap-5 justify-center text-center p-10'>
+                  <div className='text-xl m-0 '><FaReact className='inline-block text-3xl md:text-5xl' /><div>React</div></div>
+                  <div className='text-xl m-0 '><SiJavascript className='inline-block text-3xl md:text-5xl' /><div>JavaScript</div></div>
+                  <div className='text-xl m-0 '><FaCss3Alt className='inline-block text-3xl md:text-5xl' /><div>CSS3</div></div>
+                  <div className='text-xl m-0 '><FaHtml5 className='inline-block text-3xl md:text-5xl' /><div>HTML</div></div>
+                  <div className='text-xl m-0 '><SiTailwindcss className='inline-block text-3xl md:text-5xl' /><div>TailWind</div></div>
+                  <div className='text-xl m-0 '><FaBootstrap className='inline-block text-3xl md:text-5xl' /><div>Bootstrap</div></div>
+                  <div className='text-xl m-0 '><SiTypescript className='inline-block text-3xl md:text-5xl' /><div>TypeScript</div></div>
+                </div>
+                <div className='text-4xl font-bold p-5'>Backend Technologies</div>
+                <div className='flex flex-wrap gap-5 justify-center text-center p-10'>
+                  <div className='text-xl m-0'><FaNodeJs className='inline-block text-3xl' /><div>Node</div></div>
+                  <div className='text-xl m-0 '><FaLinux className='inline-block text-3xl' /><div>Linux</div></div>
+                  <div className='text-xl m-0 '><FaPython className='inline-block text-3xl' /><div>Python</div></div>
+                  <div className='text-xl m-0 '><SiExpress className='inline-block text-3xl' /><div>Express</div></div>
+                  <div className='text-xl m-0 '><SiFlask className='inline-block text-3xl' /><div>Flask</div></div>
+                  <div className='text-xl m-0 '><SiMysql className='inline-block text-3xl' /><div>MySQL</div></div>
+                  <div className='text-xl m-0 '><SiMongodb className='inline-block text-3xl' /><div>MongoDB</div></div>
+                  <div className='text-xl m-0 '><SiNginx className='inline-block text-3xl' /><div>NginX</div></div>
+                  <div className='text-xl m-0 '><SiPostgresql className='inline-block text-3xl' /><div>PostgreSQL</div></div>
+                  <div className='text-xl m-0 '><SiAmazonaws className='inline-block text-3xl' /><div>AmazonAWS</div></div>
+                  <div className='text-xl m-0 '><SiTypescript className='inline-block text-3xl' /><div>TypeScript</div></div>
+                </div>
+                <div className='text-4xl font-bold p-5'>Website Design Technologies</div>
+                <div className='flex flex-wrap gap-5 justify-center text-center p-10'>
+                  <div className='text-xl m-0 '><FaWordpress className='inline-block text-3xl' /><div>Wordpress</div></div>
+                  <div className='text-xl m-0 '><SiFigma className='inline-block text-3xl' /><div>Figma</div></div>
+                  <div className='text-xl m-0 '><SiWix className='inline-block text-3xl' /><div>Wix</div></div>
+                  <div className='text-xl m-0 '><SiElementor className='inline-block text-3xl' /><div>Elementor</div></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -213,7 +229,9 @@ function App () {
             <div className=' w-20 h-3 border-b-4 border-red ' />
           </div>
           <div className='py-16'>
-            <div className='relative rounded-full z-10 overflow-hidden after:absolute after:bg-red after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full'><img src='../src/assets/images/review.png' className='mx-auto w-60 ' /></div>
+            <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
+              <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+            </div>
             <div className='font-semibold text-lg opacity-70 py-5'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
               Plan upon yet way get cold spot its week. Almost do am or limits hearts.
               Resolve parties but why she shewing. She sang know now always remembering to the point.”
@@ -222,12 +240,14 @@ function App () {
             <div className='font-bold text-red text-lg'>CEO theDataPath</div>
           </div>
         </section>
+
         <section className='container text-center'>
           <div className='p-4 bg-layout_black'>
             <h2 className='font-bold text-4xl py-3'>I'm Available For Freelance Work</h2>
             <div className='py-8'><button className='px-8 bg-red py-4 rounded-full text-xl font-bold'>Hire Me Now</button></div>
           </div>
         </section>
+
         <section className='container text-center py-5'>
           <div className='sub_title font-bold py-5'>BLOGS</div>
           <div><h2 className=' font-bold text-4xl '>What I Know About Softwares</h2></div>
@@ -235,7 +255,7 @@ function App () {
             <div className=' w-3 h-3 border-b-4 border-red ' />
             <div className=' w-20 h-3 border-b-4 border-red ' />
           </div>
-          <div className='py-8'>
+          <div className='py-8 md:w-80 md:py-10'>
             <div className='text-left'>
               <div><img src='../src/assets/images/blog1.jpg' className='rounded-xl' /></div>
               <div className='font-bold text-3xl pt-4'> API Testing</div>
@@ -253,8 +273,9 @@ function App () {
             </div>
           </div>
         </section>
-        <section className='m-2'>
-          <div className=' bg-black_bg p-8'>
+
+        <section className='m-2 container'>
+          <div className=' bg-layout_black p-8 md:p-12'>
             <div className='font-bold text-4xl py-4'>
               Let's talk?
             </div>
@@ -285,11 +306,12 @@ function App () {
               })}
               <textarea value='Tell Us About Your Project' rows={10} className='p-4 text-sm bg-layout_black opacity-60' />
               <div className='font-bold text-xl'>
-                <button className=' py-2 px-32 bg-red rounded-full'>Send</button>
+                <button className=' py-2 px-32 md:px-12 md:py-5 bg-red rounded-full'>Send Message </button>
               </div>
             </form>
           </div>
         </section>
+
         <section className='container flex flex-col gap-y-10 py-20'>
           <div className='text-center '>
             <div className='text-3xl rounded-md bg-blue w-fit mx-auto'><SiMinutemailer className='inline-block p-3 text-6xl' /></div>
@@ -312,6 +334,7 @@ function App () {
 
           </div>
         </section>
+
         <footer className='bg-black_bg '>
           <div className='p-10 opacity-60 '>
             Copyright <span className='px-1'>{year}</span> Adedayo Samuel. Inspiration from Ambrox
