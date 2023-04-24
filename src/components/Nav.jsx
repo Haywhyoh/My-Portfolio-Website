@@ -27,7 +27,7 @@ export default function Nav () {
   }
   return (
     <div className='text-white'>
-      <div className='bg-black_bg p-4  flex justify-between items-center fixed w-full z-30'>
+      <div className='bg-black_bg p-4  flex justify-between items-center fixed w-full z-30 md:p-8'>
         <div className='text-4xl' onClick={showNav}><FiMenu /> </div>
         <div><img className=' w-20 text-2xl' src='../src/assets/images/logo.svg' /></div>
       </div>
