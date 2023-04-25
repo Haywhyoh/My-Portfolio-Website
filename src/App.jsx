@@ -77,12 +77,49 @@ function App () {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+
+  function toggle () {
+    const elementList = document.querySelectorAll('.skillTech');
+    const skill = document.querySelector('#skills');
+    const experience = document.querySelector('#experience');
+    const experienceList = elementList[1].classList;
+    const skillList = elementList[0].classList;
+    experienceList.remove('bg-layout_black2');
+
+    experienceList.add('bg-red');
+    skillList.add('bg-layout_black2');
+    skillList.remove('bg-red');
+
+    skill.classList.remove('flex');
+    skill.classList.add('hidden');
+    experience.classList.remove('hidden');
+    experience.classList.add('flex');
+  }
+
+  function toggle2 () {
+    const elementList = document.querySelectorAll('.skillTech');
+    const skill = document.querySelector('#skills');
+    const experience = document.querySelector('#experience');
+    const experienceList = elementList[1].classList;
+    const skillList = elementList[0].classList;
+    experienceList.add('bg-layout_black2');
+    experienceList.remove('bg-red');
+    skillList.remove('bg-layout_black2');
+    skillList.add('bg-red');
+    skill.classList.add('flex');
+    skill.classList.remove('hidden');
+    experience.classList.add('hidden');
+    experience.classList.remove('flex');
+  }
+
   return (
     <div>
       <Nav />
       <div className='pt-36 h-fit w-full font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white'>
-
-        <section className='container text-center md:flex md:flex-col lg:flex-row lg:pt-10'>
+        {
+            // <------------------------------------------------HOME ------------------------------------------------------------------>
+          }
+        <section className='container text-center md:flex md:flex-col lg:flex-row lg:pt-10 2xl:pt-20'>
           <div className='py-10 md:text-center md:flex md:flex-col md:justify-center md:gap-8 lg:w-1/2'>
             <div>
               <div className='text-center md:mx-auto md:flex md:justify-center'><div className='text-4xl font-extrabold flex gap-x-3 py-4 md:text-7xl lg:text-6xl 2xl:text-8xl'>Hi <img className='w-10 md:w-16 lg:h-16' src={hand} /> I'm Samuel</div></div>
@@ -96,8 +133,10 @@ function App () {
             <img className=' w-96 h-80 absolute -top-8 md:w-2/3 md:left-32' src={picBg} />
           </div>
         </section>
-
-        <section className='text-center bg-layout_black mt-64 container md:mt-96 lg:mt-20'>
+        {
+            // <-----------------------------------MY EXPERTISE ------------------------------------------------------------------>
+          }
+        <section className='text-center bg-layout_black mt-64 container md:mt-96 lg:mt-20 2xl:mt-60'>
           <div className='py-4'><h2 className='sub_title font-bold md:text-2xl md:pt-10'>My Expertise</h2></div>
           <div className='py-5'><h2 className=' font-bold text-4xl md:text-6xl'>What I Do</h2></div>
           <div className='flex gap-1 justify-center '>
@@ -115,7 +154,9 @@ function App () {
             </div>
           </div>
         </section>
-
+        {
+            // <-----------------------------------MY RECENT WORKS ------------------------------------------------------------------>
+          }
         <section className=' text-center py-10 container'>
           <div><h2 className='sub_title font-bold md:text-2xl md:pt-10'>Recent Work</h2></div>
           <div className='lg:flex lg:items-center 2xl:justify-center'>
@@ -142,15 +183,17 @@ function App () {
             ))}
           </div>
         </section>
-
+        {
+            // <----------------------------------- ABOUT ME ------------------------------------------------------------------>
+          }
         <section className='m-2 text-center lg:flex lg:items-center lg:text-left  lg:px-4 lg:gap-x-20 lg:my-40 lg:mx-auto justify-center'>
           <div className='flex justify-center mx-auto lg:mx-0'>
             <img src='../src/assets/images/myPic.png' className=' w-60 md:w-96 md:mt-32 lg:mt-0' />
           </div>
           <div className='lg:w-1/2'>
             <h2 className='sub_title font-bold py-3 md:text-2xl'>About Me</h2>
-            <h2 className='text-4xl font-bold md:mx-20 lg:mx-0 lg:text-3xl lg:py-4'>I can help you develop and maintain your Websites and softwares</h2>
-            <p className='py-5 font-medium text-lg md:mx-20 md:pt-10 lg:mx-0 lg:py-2 lg:text-sm '> Hi, my name is Adedayo Samuel and I began using WordPress when it first began.
+            <h2 className='text-4xl font-bold md:mx-20 lg:mx-0 lg:text-3xl lg:py-4 2xl:text-5xl'>I can help you develop and maintain your Websites and softwares</h2>
+            <p className='py-5 font-medium text-lg md:mx-20 md:pt-10 lg:mx-0 lg:py-2 lg:text-sm 2xl:text-lg'> Hi, my name is Adedayo Samuel and I began using WordPress when it first began.
               I’ve spent most of my waking hours for the last ten years designing, programming and operating WordPress sites.
               One of my specialties is taking an idea from scratch and creating a full-fledged platform.
               I go beyond to produce sites with a unique.
@@ -178,22 +221,29 @@ function App () {
             </div>
           </div>
         </section>
-
+        {
+            // <--------------------------------------SKILLS AND TECHNOLOGIES ------------------------------------------------------------------>
+          }
         <section className='text-center container py-5'>
-          <div className='sub_title font-bold py-5 '>Skills and Technologies </div>
+          <div className='sub_title font-bold py-5 md:pb-24'>Skills and Technologies </div>
           <div className='md:relative'>
             <div className='flex flex-wrap gap-y-5 py-5 flex-col justify-center md:flex-row md:w-full md:gap-x-20 md:bg-black_bg md:rounded-full md:border md:border-white md:border-opacity-30 md:absolute md:-top-16'>
-              <div>
-                <button className='bg-red  rounded-full  px-12 py-4  lg:px-32'>
+              <div onClick={toggle2}>
+                <button className='bg-red  rounded-full  px-12 py-4  lg:px-32 skillTech'>
                   <div className='font-bold text-md md:text-xl'>SKILLS</div>
                 </button>
               </div>
-              <div>
-                <button className='bg-layout_black2 rounded-full  px-14 py-5 md:px-12 lg:px-32'> <div className='font-bold text-md'>EXPERIENCE</div></button>
+              <div onClick={toggle}>
+                <button className='bg-layout_black2 rounded-full  px-14 py-5 md:px-12 lg:px-32 skillTech'> <div className='font-bold text-md'>EXPERIENCE</div></button>
               </div>
 
             </div>
-            <div className='flex flex-wrap gap-8  '>
+            <div className='flex flex-wrap gap-8 hidden ' id='experience'>
+              <div className='border  border-white p-4 bg-black_bg border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
+                Experience
+              </div>
+            </div>
+            <div className='flex flex-wrap gap-8  ' id='skills'>
               <div className='border  border-white p-4 bg-black_bg border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
                 <div>
                   <div className='text-4xl font-bold p-5'>FrontEnd Technologies</div>
@@ -239,6 +289,9 @@ function App () {
             </div>
           </div>
         </section>
+        {
+            // <----------------------------------------REVIEWS AND FEEDBACK ------------------------------------------------------------------>
+          }
         <section className='container text-center'>
           <div className='sub_title font-bold py-5'>REVIEWS AND FEEDBACK</div>
           <div><h2 className=' font-bold text-4xl '>What My Customers Said</h2></div>
@@ -258,14 +311,18 @@ function App () {
             <div className='font-bold text-red text-lg'>CEO theDataPath</div>
           </div>
         </section>
-
+        {
+            // <-----------------------------------AE --------VAILABLE FOR FREELANCE---------------------------------------------------------->
+          }
         <section className='container text-center'>
           <div className='p-4 bg-layout_black lg:p-20'>
             <h2 className='font-bold text-4xl py-3 lg:text-7xl'>I'm Available For Freelance Work</h2>
             <div className='py-8'><button className='px-8 bg-red py-4 rounded-full text-xl font-bold'>Hire Me Now</button></div>
           </div>
         </section>
-
+        {
+            // <---------------------------------------BLOGS ------------------------------------------------------------------>
+          }
         <section className='container text-center py-5'>
           <div className='sub_title font-bold py-5'>BLOGS</div>
           <div><h2 className=' font-bold text-4xl '>What I Know About Softwares</h2></div>
@@ -291,7 +348,9 @@ function App () {
             </div>
           </div>
         </section>
-
+        {
+            // <-----------------------------------CONTACT FORM ------------------------------------------------------------------>
+          }
         <section className='container lg:flex lg:items-center'>
           <div className='m-2 xl:w-3/5'>
             <div className=' bg-layout_black p-8 md:p-12'>
@@ -354,6 +413,9 @@ function App () {
             </div>
           </div>
         </section>
+        {
+            // <------------------------------------------------------FOOTER ------------------------------------------------------------------>
+          }
         <footer className='bg-black_bg mt-10'>
           <div className='p-10 opacity-80 lg:font-bold lg:text-xl '>
             Copyright <span className='px-1'>{year}</span> Adedayo Samuel. Inspiration from Ambrox
