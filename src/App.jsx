@@ -8,6 +8,7 @@ import myPic from './assets/images/myPic.png';
 import picBg from './assets/images/7.png';
 import Service from './components/Service';
 import ProjectCard from './components/ProjectCard';
+import SideNav from './components/SideNav';
 import serviceList from './data/services.json';
 import projects from './data/projectCard.json';
 import { SlLocationPin } from 'react-icons/sl';
@@ -115,28 +116,29 @@ function App () {
   return (
     <div>
       <Nav />
-      <div className='pt-36 h-fit w-full font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white'>
+      <div className='pt-36 h-fit w-full font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white lg:relative '>
+        <div className='absolute top-0'><SideNav /></div>
         {
             // <------------------------------------------------HOME ------------------------------------------------------------------>
           }
-        <section className='container text-center md:flex md:flex-col lg:flex-row lg:pt-10 2xl:pt-20'>
+        <section className='container text-center md:flex md:flex-col lg:flex-row lg:pt-10 2xl:pt-20 lg:ps-36'>
           <div className='py-10 md:text-center md:flex md:flex-col md:justify-center md:gap-8 lg:w-1/2'>
             <div>
-              <div className='text-center md:mx-auto md:flex md:justify-center'><div className='text-4xl font-extrabold flex gap-x-3 py-4 md:text-7xl lg:text-6xl 2xl:text-8xl'>Hi <img className='w-10 md:w-16 lg:h-16' src={hand} /> I'm Samuel</div></div>
+              <div className='text-center md:mx-auto md:flex md:justify-center'><div className='text-4xl font-extrabold flex gap-x-3 py-4 md:text-7xl lg:text-5xl 2xl:text-8xl'>Hi <img className='w-10 md:w-16 lg:h-16' src={hand} /> I'm Samuel</div></div>
               <span className='text-2xl md:text-4xl 2xl:text-6xl font-bold' ref={el} />
             </div>
             <div className='pt-9'><button className='bg-dark_blue px-10 py-4 rounded-3xl font-bold text-xl md:mb-10'>My Resume</button></div>
           </div>
 
           <div className='relative h-fit md:w-full lg:w-1/2'>
-            <img src={myPic} className='absolute w-80  z-20 buttom-30 md:w-2/3 md:left-32 lg:w-4/5 ' />
-            <img className=' w-96 h-80 absolute -top-8 md:w-2/3 md:left-32' src={picBg} />
+            <img src={myPic} className='absolute w-80  z-20 buttom-30 md:w-2/3 md:left-32 lg:w-4/5 lg:pe-8 ' />
+            <img className=' w-96 h-80 absolute -top-8 md:w-2/3 md:left-32 ' src={picBg} />
           </div>
         </section>
         {
             // <-----------------------------------MY EXPERTISE ------------------------------------------------------------------>
           }
-        <section className='text-center bg-layout_black mt-64 container md:mt-96 lg:mt-20 2xl:mt-60'>
+        <section className='text-center bg-layout_black mt-64 container md:mt-96 lg:mt-20 2xl:mt-60 lg:ps-36'>
           <div className='py-4'><h2 className='sub_title font-bold md:text-2xl md:pt-10'>My Expertise</h2></div>
           <div className='py-5'><h2 className=' font-bold text-4xl md:text-6xl'>What I Do</h2></div>
           <div className='flex gap-1 justify-center '>
@@ -144,7 +146,7 @@ function App () {
             <div className=' w-20 border-b-4 opacity-60 border-red ' />
           </div>
           <div className='py-5 md:pt-20'>
-            <div className='md:flex md:gap-10 md:flex-wrap xl:gap-4'>
+            <div className='md:flex md:gap-10 md:flex-wrap xl:gap-4 justify-center'>
               {serviceList.map(service => (
                 <Service
                   key={service.id}
@@ -157,7 +159,7 @@ function App () {
         {
             // <-----------------------------------MY RECENT WORKS ------------------------------------------------------------------>
           }
-        <section className=' text-center py-10 container'>
+        <section className=' text-center py-10 container lg:ps-36'>
           <div><h2 className='sub_title font-bold md:text-2xl md:pt-10'>Recent Work</h2></div>
           <div className='lg:flex lg:items-center 2xl:justify-center'>
             <div className=' text-4xl font-bold py-5 md:text-6xl lg:text-4xl lg:w-1/2 2xl:max-w-2xl'> Look at my portfolio and give a feedback</div>
@@ -173,7 +175,7 @@ function App () {
 
         </section>
 
-        <section className='container'>
+        <section className='container lg:ps-36'>
           <div className='md:flex md:flex-wrap gap-10 justify-center'>
             {projects.map(project => (
               <ProjectCard
@@ -186,7 +188,7 @@ function App () {
         {
             // <----------------------------------- ABOUT ME ------------------------------------------------------------------>
           }
-        <section className='m-2 text-center lg:flex lg:items-center lg:text-left  lg:px-4 lg:gap-x-20 lg:my-40 lg:mx-auto justify-center'>
+        <section className='m-2 text-center lg:flex lg:items-center lg:text-left  lg:px-4 lg:gap-x-20 lg:my-40 lg:mx-auto justify-center lg:ps-36'>
           <div className='flex justify-center mx-auto lg:mx-0'>
             <img src='../src/assets/images/myPic.png' className=' w-60 md:w-96 md:mt-32 lg:mt-0' />
           </div>
@@ -224,10 +226,10 @@ function App () {
         {
             // <--------------------------------------SKILLS AND TECHNOLOGIES ------------------------------------------------------------------>
           }
-        <section className='text-center container py-5'>
+        <section className='text-center container py-5 lg:ps-36'>
           <div className='sub_title font-bold py-5 md:pb-24'>Skills and Technologies </div>
           <div className='md:relative'>
-            <div className='flex flex-wrap gap-y-5 py-5 flex-col justify-center md:flex-row md:w-full md:gap-x-20 md:bg-black_bg md:rounded-full md:border md:border-white md:border-opacity-30 md:absolute md:-top-16'>
+            <div className='flex flex-wrap gap-y-5 py-5 flex-col justify-center md:flex-row md:w-full md:gap-x-20 md:bg-black_bg md:rounded-full md:border md:border-white md:border-opacity-30 md:absolute md:-top-16 lg:py-2'>
               <div onClick={toggle2}>
                 <button className='bg-red  rounded-full  px-12 py-4  lg:px-32 skillTech'>
                   <div className='font-bold text-md md:text-xl'>SKILLS</div>
@@ -238,7 +240,7 @@ function App () {
               </div>
 
             </div>
-            <div className='flex flex-wrap gap-8 hidden ' id='experience'>
+            <div className='flex-wrap gap-8 hidden ' id='experience'>
               <div className='border  border-white p-4 bg-black_bg border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
                 Experience
               </div>
@@ -292,7 +294,7 @@ function App () {
         {
             // <----------------------------------------REVIEWS AND FEEDBACK ------------------------------------------------------------------>
           }
-        <section className='container text-center'>
+        <section className='container text-center lg:ps-36'>
           <div className='sub_title font-bold py-5'>REVIEWS AND FEEDBACK</div>
           <div><h2 className=' font-bold text-4xl '>What My Customers Said</h2></div>
           <div className='flex gap-2 justify-center '>
@@ -312,9 +314,9 @@ function App () {
           </div>
         </section>
         {
-            // <-----------------------------------AE --------VAILABLE FOR FREELANCE---------------------------------------------------------->
+            // <----------------------------------------------AVAILABLE FOR FREELANCE---------------------------------------------------------->
           }
-        <section className='container text-center'>
+        <section className='container text-center lg:ps-36'>
           <div className='p-4 bg-layout_black lg:p-20'>
             <h2 className='font-bold text-4xl py-3 lg:text-7xl'>I'm Available For Freelance Work</h2>
             <div className='py-8'><button className='px-8 bg-red py-4 rounded-full text-xl font-bold'>Hire Me Now</button></div>
@@ -323,9 +325,9 @@ function App () {
         {
             // <---------------------------------------BLOGS ------------------------------------------------------------------>
           }
-        <section className='container text-center py-5'>
+        <section className='container text-center py-5 lg:ps-36'>
           <div className='sub_title font-bold py-5'>BLOGS</div>
-          <div><h2 className=' font-bold text-4xl '>What I Know About Softwares</h2></div>
+          <div><h2 className=' font-bold text-4xl '>Learn About Softwares</h2></div>
           <div className='flex gap-2 justify-center '>
             <div className=' w-3 h-3 border-b-4 border-red ' />
             <div className=' w-20 h-3 border-b-4 border-red ' />
@@ -351,7 +353,7 @@ function App () {
         {
             // <-----------------------------------CONTACT FORM ------------------------------------------------------------------>
           }
-        <section className='container lg:flex lg:items-center'>
+        <section className='container lg:flex lg:items-center lg:ps-36 lg:justify-center'>
           <div className='m-2 xl:w-3/5'>
             <div className=' bg-layout_black p-8 md:p-12'>
               <div className='font-bold text-4xl py-4'>
@@ -416,7 +418,7 @@ function App () {
         {
             // <------------------------------------------------------FOOTER ------------------------------------------------------------------>
           }
-        <footer className='bg-black_bg mt-10'>
+        <footer className='bg-black_bg mt-10 lg:ps-36'>
           <div className='p-10 opacity-80 lg:font-bold lg:text-xl '>
             Copyright <span className='px-1'>{year}</span> Adedayo Samuel. Inspiration from Ambrox
           </div>
