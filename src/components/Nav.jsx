@@ -22,7 +22,7 @@ export default function Nav () {
     const navListClass = navList.classList;
     list.remove('hidden');
     list.add('block');
-    navListClass.add('animate__slideInLeft');
+    navListClass.add('animate__slideInLeft300');
     navListClass.remove('animate__slideOutLeft');
   }
   return (
