@@ -116,16 +116,16 @@ function App () {
   return (
     <div>
       <Nav />
-      <div className='pt-36 h-fit w-full font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white lg:relative '>
+      <div className='pt-36 screen w-full font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white lg:relative '>
         <div className='absolute top-0'><SideNav /></div>
         {
             // <------------------------------------------------HOME ------------------------------------------------------------------>
           }
-        <section className='container text-center md:flex md:flex-col lg:flex-row lg:pt-10 2xl:pt-20 lg:ps-36'>
+        <section className='container text-center md:flex md:flex-col lg:flex-row lg:pt-10 2xl:pt-20 lg:ps-36' id='home'>
           <div className='py-10 md:text-center md:flex md:flex-col md:justify-center md:gap-8 lg:w-1/2'>
             <div>
-              <div className='text-center md:mx-auto md:flex md:justify-center'><div className='text-4xl font-extrabold flex gap-x-3 py-4 md:text-7xl lg:text-5xl 2xl:text-8xl'>Hi <img className='w-10 md:w-16 lg:h-16' src={hand} /> I'm Samuel</div></div>
-              <span className='text-2xl md:text-4xl 2xl:text-6xl font-bold' ref={el} />
+              <div className='text-center md:mx-auto md:flex md:justify-center'><div className='text-4xl font-extrabold flex gap-x-3 py-4 md:text-7xl lg:text-5xl 2xl:text-7xl'>Hi <img className='w-10 md:w-16 lg:h-16' src={hand} /> I'm Samuel</div></div>
+              <span className='text-2xl md:text-4xl 2xl:text-4xl font-bold' ref={el} />
             </div>
             <div className='pt-9'><button className='bg-dark_blue px-10 py-4 rounded-3xl font-bold text-xl md:mb-10'>My Resume</button></div>
           </div>
@@ -138,7 +138,7 @@ function App () {
         {
             // <-----------------------------------MY EXPERTISE ------------------------------------------------------------------>
           }
-        <section className='text-center bg-layout_black mt-64 container md:mt-96 lg:mt-20 2xl:mt-60 lg:ps-36'>
+        <section className='text-center bg-layout_black mt-64 container md:mt-96 lg:mt-20 2xl:mt-40 lg:ps-36' id='services'>
           <div className='py-4'><h2 className='sub_title font-bold md:text-2xl md:pt-10'>My Expertise</h2></div>
           <div className='py-5'><h2 className=' font-bold text-4xl md:text-6xl'>What I Do</h2></div>
           <div className='flex gap-1 justify-center '>
@@ -159,7 +159,7 @@ function App () {
         {
             // <-----------------------------------MY RECENT WORKS ------------------------------------------------------------------>
           }
-        <section className=' text-center py-10 container lg:ps-36'>
+        <section className=' text-center py-10 container lg:ps-36' id='portfolio'>
           <div><h2 className='sub_title font-bold md:text-2xl md:pt-10'>Recent Work</h2></div>
           <div className='lg:flex lg:items-center 2xl:justify-center'>
             <div className=' text-4xl font-bold py-5 md:text-6xl lg:text-4xl lg:w-1/2 2xl:max-w-2xl'> Look at my portfolio and give a feedback</div>
@@ -188,7 +188,7 @@ function App () {
         {
             // <----------------------------------- ABOUT ME ------------------------------------------------------------------>
           }
-        <section className='m-2 text-center lg:flex lg:items-center lg:text-left  lg:px-4 lg:gap-x-20 lg:my-40 lg:mx-auto justify-center lg:ps-36'>
+        <section className='m-2 text-center lg:flex lg:items-center lg:text-left  lg:px-4 lg:gap-x-20 lg:my-40 lg:mx-auto justify-center lg:ps-36' id='about'>
           <div className='flex justify-center mx-auto lg:mx-0'>
             <img src='../src/assets/images/myPic.png' className=' w-60 md:w-96 md:mt-32 lg:mt-0' />
           </div>
@@ -226,7 +226,7 @@ function App () {
         {
             // <--------------------------------------SKILLS AND TECHNOLOGIES ------------------------------------------------------------------>
           }
-        <section className='text-center container py-5 lg:ps-36'>
+        <section className='text-center container py-5 lg:ps-36' id='skillMenu'>
           <div className='sub_title font-bold py-5 md:pb-24'>Skills and Technologies </div>
           <div className='md:relative'>
             <div className='flex flex-wrap gap-y-5 py-5 flex-col justify-center md:flex-row md:w-full md:gap-x-20 md:bg-black_bg md:rounded-full md:border md:border-white md:border-opacity-30 md:absolute md:-top-16 lg:py-2'>
@@ -246,9 +246,9 @@ function App () {
               </div>
             </div>
             <div className='flex flex-wrap gap-8  ' id='skills'>
-              <div className='border  border-white p-4 bg-black_bg border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
+              <div className='border w-full border-white p-4 bg-black_bg border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
                 <div>
-                  <div className='text-4xl font-bold p-5'>FrontEnd Technologies</div>
+                  <div className='text-3xl lg:text-4xl font-bold p-5'>FrontEnd Technologies</div>
                   <div className='flex flex-wrap gap-5 justify-center text-center p-10'>
                     <div className='text-xl m-0 '><FaReact className='inline-block text-3xl md:text-5xl' /><div>React</div></div>
                     <div className='text-xl m-0 '><SiJavascript className='inline-block text-3xl md:text-5xl' /><div>JavaScript</div></div>
@@ -261,7 +261,7 @@ function App () {
                 </div>
 
                 <div>
-                  <div className='text-4xl font-bold p-5'>Backend Technologies</div>
+                  <div className='text-3xl lg:text-4xl font-bold p-5'>Backend Technologies</div>
                   <div className='flex flex-wrap gap-5 justify-center text-center p-10'>
                     <div className='text-xl m-0'><FaNodeJs className='inline-block text-3xl' /><div>Node</div></div>
                     <div className='text-xl m-0 '><FaLinux className='inline-block text-3xl' /><div>Linux</div></div>
@@ -278,7 +278,7 @@ function App () {
                 </div>
 
                 <div className=''>
-                  <div className='text-4xl font-bold p-5'>Website Design Technologies</div>
+                  <div className='text-3xl lg:text-4xl font-bold p-5'>Website Design Technologies</div>
                   <div className='flex flex-wrap gap-5 justify-center text-center p-10'>
                     <div className='text-xl m-0 '><FaWordpress className='inline-block text-3xl' /><div>Wordpress</div></div>
                     <div className='text-xl m-0 '><SiFigma className='inline-block text-3xl' /><div>Figma</div></div>
@@ -294,7 +294,7 @@ function App () {
         {
             // <----------------------------------------REVIEWS AND FEEDBACK ------------------------------------------------------------------>
           }
-        <section className='container text-center lg:ps-36'>
+        <section className='container text-center lg:ps-36' id='reviews'>
           <div className='sub_title font-bold py-5'>REVIEWS AND FEEDBACK</div>
           <div><h2 className=' font-bold text-4xl '>What My Customers Said</h2></div>
           <div className='flex gap-2 justify-center '>
@@ -353,7 +353,7 @@ function App () {
         {
             // <-----------------------------------CONTACT FORM ------------------------------------------------------------------>
           }
-        <section className='container lg:flex lg:items-center lg:ps-36 lg:justify-center'>
+        <section className='container lg:flex lg:items-center lg:ps-36 lg:justify-center' id='contact'>
           <div className='m-2 xl:w-3/5'>
             <div className=' bg-layout_black p-8 md:p-12'>
               <div className='font-bold text-4xl py-4'>
@@ -385,8 +385,8 @@ function App () {
                   );
                 })}
                 <textarea value='Tell Us About Your Project' rows={10} className='p-4 text-sm bg-layout_black opacity-60' />
-                <div className='font-bold text-xl'>
-                  <button className=' py-2 px-32 md:px-12 md:py-5 bg-red rounded-full'>Send Message </button>
+                <div className='font-bold text-lg md:text-xl'>
+                  <button className=' py-2 px-10 lg:px-32 md:px-12 md:py-5 bg-red rounded-full'>Send Message </button>
                 </div>
               </form>
             </div>
