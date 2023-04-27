@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import hand from './assets/images/hand.png';
 import myPic from './assets/images/myPic.png';
 import picBg from './assets/images/7.png';
+import backGround from './assets/images/banner.jpeg';
 import Service from './components/Service';
 import ProjectCard from './components/ProjectCard';
 import SideNav from './components/SideNav';
@@ -116,7 +117,7 @@ function App () {
   return (
     <div>
       <Nav />
-      <div className='pt-36 screen w-full font-body  bg-[url("./src/assets/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white lg:relative '>
+      <div className='pt-36 screen w-full font-body bg-cover bg-fixed bg-center text-white lg:relative' id='app'>
         <div className='absolute top-0'><SideNav /></div>
         {
             // <------------------------------------------------HOME ------------------------------------------------------------------>
@@ -127,9 +128,8 @@ function App () {
               <div className='text-center md:mx-auto md:flex md:justify-center'><div className='text-4xl font-extrabold flex gap-x-3 py-4 md:text-7xl lg:text-5xl 2xl:text-7xl'>Hi <img className='w-10 md:w-16 lg:h-16' src={hand} /> I'm Samuel</div></div>
               <span className='text-2xl md:text-4xl 2xl:text-4xl font-bold' ref={el} />
             </div>
-            <div className='pt-9'><button className='bg-dark_blue px-10 py-4 rounded-3xl font-bold text-xl md:mb-10'>My Resume</button></div>
+            <div className='pt-9'><button className='bg-dark_blue px-10 py-4 rounded-3xl font-bold text-xl md:mb-10 hover:bg-red hover:transition-colors'>My Resume</button></div>
           </div>
-
           <div className='relative h-fit md:w-full lg:w-1/2'>
             <img src={myPic} className='absolute w-80  z-20 buttom-30 md:w-2/3 md:left-32 lg:w-4/5 lg:pe-8 ' />
             <img className=' w-96 h-80 absolute -top-8 md:w-2/3 md:left-32 ' src={picBg} />
@@ -190,7 +190,7 @@ function App () {
           }
         <section className='m-2 text-center lg:flex lg:items-center lg:text-left  lg:px-4 lg:gap-x-20 lg:my-40 lg:mx-auto justify-center lg:ps-36' id='about'>
           <div className='flex justify-center mx-auto lg:mx-0'>
-            <img src='../src/assets/images/myPic.png' className=' w-60 md:w-96 md:mt-32 lg:mt-0' />
+            <img src={myPic} className=' w-60 md:w-96 md:mt-32 lg:mt-0' />
           </div>
           <div className='lg:w-1/2'>
             <h2 className='sub_title font-bold py-3 md:text-2xl'>About Me</h2>
@@ -241,8 +241,109 @@ function App () {
 
             </div>
             <div className='flex-wrap gap-8 hidden ' id='experience'>
-              <div className='border  border-white p-4 bg-black_bg border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
-                Experience
+              <div className=' w-full border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
+                <div className='w-full text-left'>
+                  <div className='w-full lg:w-1/3 bg-layout_black p-4'>
+                    <div className='flex justify-between py-2'>
+                      <div className='font-extrabold text-2xl'>ALX</div>
+                      <div>Remote</div>
+                    </div>
+                    <div className='flex justify-between py-2'>
+                      <h2 className='font-bold text-sm'>Full Stack Software Engineer (Intern)</h2>
+                      <div className='text-sm'>02/2022 - 03/2023</div>
+                    </div>
+                    <div className='font-bold text-xl py-2'> Technologies</div>
+                    <div className='flex py-1'>
+                      <ul className=' list-disc px-8'>
+                        <li>NodeJS</li>
+                        <li>TypeScript</li>
+                        <li>Python</li>
+                        <li>MongoDb</li>
+                        <li>Flask</li>
+                      </ul>
+                      <ul className=' list-disc px-8'>
+                        <li> Expess</li>
+                        <li>MySQL</li>
+                        <li>Postgress</li>
+                        <li>Linux</li>
+                        <li>AWS</li>
+                      </ul>
+                    </div>
+
+                    <div className='text-sm py-4'>
+                      Led a 3-person team delivering a product for free, serving 500 users, releasing updates every week on a codebase with more than 4,000 lines of code, a scalable NoSQL database with MVC architecture.
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <div className='w-full lg:w-1/3 bg-layout_black p-4 text-left'>
+                <div className='flex justify-between py-2'>
+                  <div className='font-extrabold text-2xl'>CodeMyGig</div>
+                  <div>Remote</div>
+                </div>
+                <div className='flex justify-between py-2'>
+                  <h2 className='font-bold text-sm text-left'>Full Stack Software Engineer</h2>
+                  <div className='text-sm'>11/2022 - 04/2023</div>
+                </div>
+                <div className='font-bold text-xl py-2'> Technologies</div>
+                <div className='flex py-1'>
+                  <ul className=' list-disc px-8'>
+                    <li>NodeJS</li>
+                    <li>TypeScript</li>
+                    <li>Python</li>
+                    <li>MongoDb</li>
+                    <li>Redis</li>
+                  </ul>
+                  <ul className=' list-disc px-8'>
+                    <li> Expess</li>
+                    <li>MySQL</li>
+                    <li>Linux</li>
+                    <li>Bash</li>
+                    <li>React</li>
+                  </ul>
+                </div>
+
+                <div className='text-sm py-4'>
+                  Led a 3-person team delivering a product for free, serving 500 users, releasing updates every week on a codebase with more than 4,000 lines of code, a scalable NoSQL database with MVC architecture.
+
+                </div>
+
+              </div>
+              <div className='w-full lg:w-1/3 bg-layout_black p-4'>
+                <div className='flex justify-between py-2'>
+                  <div className='font-extrabold text-2xl'>ALX</div>
+                  <div>Remote</div>
+                </div>
+                <div className='flex justify-between py-2'>
+                  <h2 className='font-bold text-sm'>Full Stack Software Engineer (Intern)</h2>
+                  <div className='text-sm'>02/2022 - 03/2023</div>
+                </div>
+                <div className='font-bold text-xl py-2'> Technologies</div>
+                <div className='flex py-1'>
+                  <ul className=' list-disc px-8'>
+                    <li>NodeJS</li>
+                    <li>TypeScript</li>
+                    <li>Python</li>
+                    <li>MongoDb</li>
+                    <li>Flask</li>
+                  </ul>
+                  <ul className=' list-disc px-8'>
+                    <li> Expess</li>
+                    <li>MySQL</li>
+                    <li>Postgress</li>
+                    <li>Linux</li>
+                    <li>AWS</li>
+                  </ul>
+                </div>
+
+                <div className='text-sm py-4'>
+                  Led a 3-person team delivering a product for free, serving 500 users, releasing updates every week on a codebase with more than 4,000 lines of code, a scalable NoSQL database with MVC architecture.
+
+                </div>
+
               </div>
             </div>
             <div className='flex flex-wrap gap-8  ' id='skills'>
@@ -385,8 +486,8 @@ function App () {
                   );
                 })}
                 <textarea value='Tell Us About Your Project' rows={10} className='p-4 text-sm bg-layout_black opacity-60' />
-                <div className='font-bold text-lg md:text-xl'>
-                  <button className=' py-2 px-10 lg:px-32 md:px-12 md:py-5 bg-red rounded-full'>Send Message </button>
+                <div className='font-bold text-lg md:text-xl flex justify-center'>
+                  <button className=' py-2 px-10 lg:px-16 md:px-12 md:py-5 bg-red rounded-full'>Send Message </button>
                 </div>
               </form>
             </div>
