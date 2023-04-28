@@ -6,7 +6,6 @@ import Nav from './components/Nav';
 import hand from './assets/images/hand.png';
 import myPic from './assets/images/myPic.png';
 import picBg from './assets/images/7.png';
-import backGround from './assets/images/banner.jpeg';
 import Service from './components/Service';
 import ProjectCard from './components/ProjectCard';
 import SideNav from './components/SideNav';
@@ -289,11 +288,11 @@ function App () {
                   <div className='text-sm'>11/2022 - 04/2023</div>
                 </div>
                 <div className='font-bold text-xl py-2'> Technologies</div>
-                <div className='flex py-1'>
+                <div className='flex py-1 text-left'>
                   <ul className=' list-disc px-8'>
                     <li>NodeJS</li>
                     <li>TypeScript</li>
-                    <li>Python</li>
+                    <li>TailWind</li>
                     <li>MongoDb</li>
                     <li>Redis</li>
                   </ul>
@@ -312,30 +311,28 @@ function App () {
                 </div>
 
               </div>
-              <div className='w-full lg:w-1/3 bg-layout_black p-4'>
+              <div className='w-full lg:w-1/3 bg-layout_black p-4 text-left'>
                 <div className='flex justify-between py-2'>
-                  <div className='font-extrabold text-2xl'>ALX</div>
-                  <div>Remote</div>
+                  <div className='font-extrabold text-2xl'>UPWORK</div>
+                  <div>Freelance</div>
                 </div>
                 <div className='flex justify-between py-2'>
-                  <h2 className='font-bold text-sm'>Full Stack Software Engineer (Intern)</h2>
-                  <div className='text-sm'>02/2022 - 03/2023</div>
+                  <h2 className='font-bold text-sm'>WordPress Developer</h2>
+                  <div className='text-sm'>6/20129 - Present</div>
                 </div>
-                <div className='font-bold text-xl py-2'> Technologies</div>
+                <div className='font-bold text-xl py-2'> SKILLS & TECH</div>
                 <div className='flex py-1'>
                   <ul className=' list-disc px-8'>
-                    <li>NodeJS</li>
-                    <li>TypeScript</li>
-                    <li>Python</li>
-                    <li>MongoDb</li>
-                    <li>Flask</li>
+                    <li>Woocommerce</li>
+                    <li>WordPress</li>
+                    <li>Elementor</li>
+                    <li>DIVI</li>
+                    <li>SEO</li>
                   </ul>
-                  <ul className=' list-disc px-8'>
-                    <li> Expess</li>
-                    <li>MySQL</li>
-                    <li>Postgress</li>
-                    <li>Linux</li>
-                    <li>AWS</li>
+                  <ul className=' list-disc ' px-8>
+                    <li>Maintenance</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
                   </ul>
                 </div>
 
