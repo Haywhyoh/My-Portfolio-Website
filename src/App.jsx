@@ -15,6 +15,15 @@ import { SlLocationPin } from 'react-icons/sl';
 import { FaWordpress, FaReact, FaNodeJs, FaPython, FaHeadphonesAlt, FaLinux, FaHtml5, FaCss3Alt, FaBootstrap, FaUserEdit, FaRegCalendarAlt } from 'react-icons/fa';
 import { SiUpwork, SiFiverr, SiFlask, SiMongodb, SiExpress, SiMinutemailer, SiJavascript, SiTypescript, SiNginx, SiMysql, SiPostgresql, SiTailwindcss, SiAmazonaws, SiFigma, SiWix, SiElementor } from 'react-icons/si';
 import FormInput from './components/FormInput';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper';
 function App () {
   const el = useRef(null);
 
@@ -228,7 +237,7 @@ function App () {
         <section className='text-center container py-5 lg:ps-36' id='skillMenu'>
           <div className='sub_title font-bold py-5 md:pb-24'>Skills and Technologies </div>
           <div className='md:relative'>
-            <div className='flex flex-wrap gap-y-5 py-5 flex-col justify-center md:flex-row md:w-full md:gap-x-20 md:bg-black_bg md:rounded-full md:border md:border-white md:border-opacity-30 md:absolute md:-top-16 lg:py-2'>
+            <div className='flex flex-wrap gap-y-5 py-5 items-center flex-col justify-center md:flex-row md:w-full md:gap-x-20 md:bg-black_bg md:rounded-full md:border md:border-white md:border-opacity-30 md:absolute md:-top-16 lg:py-2'>
               <div onClick={toggle2}>
                 <button className='bg-red  rounded-full  px-12 py-4  lg:px-32 skillTech'>
                   <div className='font-bold text-md md:text-xl'>SKILLS</div>
@@ -239,10 +248,10 @@ function App () {
               </div>
 
             </div>
-            <div className='flex-wrap gap-8 hidden ' id='experience'>
-              <div className=' w-full border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
-                <div className='w-full text-left'>
-                  <div className='w-full lg:w-1/3 bg-layout_black p-4'>
+            <div className=' gap-8 hidden w-full ' id='experience'>
+              <div className=' w-full border-opacity-30 md:pt-20 flex flex-col gap-4 lg:flex-row px-4 mx-auto justify-center flex-wrap lg:bg-layout_black'>
+                <div className='w-full flex flex-col lg:flex-row flex-wrap gap-6 justify-center p-4 text-left'>
+                  <div className='w-full lg:w-3/6 xl:w-1/3 bg-layout_black p-4'>
                     <div className='flex justify-between py-2'>
                       <div className='font-extrabold text-2xl'>ALX</div>
                       <div>Remote</div>
@@ -275,73 +284,76 @@ function App () {
                     </div>
 
                   </div>
+                  <div className='w-full lg:w-3/6 xl:w-1/3 bg-layout_black p-4 text-left'>
+                    <div className='flex justify-between py-2'>
+                      <div className='font-extrabold text-2xl'>CodeMyGig</div>
+                      <div>Remote</div>
+                    </div>
+                    <div className='flex justify-between py-2'>
+                      <h2 className='font-bold text-sm text-left'>Full Stack Software Engineer</h2>
+                      <div className='text-sm'>11/2022 - 04/2023</div>
+                    </div>
+                    <div className='font-bold text-xl py-2'> Technologies</div>
+                    <div className='flex py-1 text-left'>
+                      <ul className=' list-disc px-8'>
+                        <li>NodeJS</li>
+                        <li>TypeScript</li>
+                        <li>TailWind</li>
+                        <li>MongoDb</li>
+                        <li>Redis</li>
+                      </ul>
+                      <ul className=' list-disc px-8'>
+                        <li> Expess</li>
+                        <li>MySQL</li>
+                        <li>Linux</li>
+                        <li>Bash</li>
+                        <li>React</li>
+                      </ul>
+                    </div>
+
+                    <div className='text-sm py-4'>
+                      Led a 3-person team delivering a product for free, serving 500 users, releasing updates every week on a codebase with more than 4,000 lines of code, a scalable NoSQL database with MVC architecture.
+
+                    </div>
+
+                  </div>
+
+                  <div className='w-full lg:w-3/6 xl:w-1/3 bg-layout_black p-4 text-left'>
+                    <div className='flex justify-between py-2'>
+                      <div className='font-extrabold text-2xl'>UPWORK</div>
+                      <div>Freelance</div>
+                    </div>
+                    <div className='flex justify-between py-2'>
+                      <h2 className='font-bold text-sm'>WordPress Developer</h2>
+                      <div className='text-sm'>6/20129 - Present</div>
+                    </div>
+                    <div className='font-bold text-xl py-2'> SKILLS & TECH</div>
+                    <div className='flex py-1'>
+                      <ul className=' list-disc px-8'>
+                        <li>Woocommerce</li>
+                        <li>WordPress</li>
+                        <li>Elementor</li>
+                        <li>DIVI</li>
+                        <li>SEO</li>
+                      </ul>
+                      <ul className=' list-disc ' px-8>
+                        <li>Maintenance</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                      </ul>
+                    </div>
+
+                    <div className='text-sm py-4'>
+                      Led a 3-person team delivering a product for free, serving 500 users, releasing updates every week on a codebase with more than 4,000 lines of code, a scalable NoSQL database with MVC architecture.
+
+                    </div>
+
+                  </div>
 
                 </div>
+
               </div>
-              <div className='w-full lg:w-1/3 bg-layout_black p-4 text-left'>
-                <div className='flex justify-between py-2'>
-                  <div className='font-extrabold text-2xl'>CodeMyGig</div>
-                  <div>Remote</div>
-                </div>
-                <div className='flex justify-between py-2'>
-                  <h2 className='font-bold text-sm text-left'>Full Stack Software Engineer</h2>
-                  <div className='text-sm'>11/2022 - 04/2023</div>
-                </div>
-                <div className='font-bold text-xl py-2'> Technologies</div>
-                <div className='flex py-1 text-left'>
-                  <ul className=' list-disc px-8'>
-                    <li>NodeJS</li>
-                    <li>TypeScript</li>
-                    <li>TailWind</li>
-                    <li>MongoDb</li>
-                    <li>Redis</li>
-                  </ul>
-                  <ul className=' list-disc px-8'>
-                    <li> Expess</li>
-                    <li>MySQL</li>
-                    <li>Linux</li>
-                    <li>Bash</li>
-                    <li>React</li>
-                  </ul>
-                </div>
 
-                <div className='text-sm py-4'>
-                  Led a 3-person team delivering a product for free, serving 500 users, releasing updates every week on a codebase with more than 4,000 lines of code, a scalable NoSQL database with MVC architecture.
-
-                </div>
-
-              </div>
-              <div className='w-full lg:w-1/3 bg-layout_black p-4 text-left'>
-                <div className='flex justify-between py-2'>
-                  <div className='font-extrabold text-2xl'>UPWORK</div>
-                  <div>Freelance</div>
-                </div>
-                <div className='flex justify-between py-2'>
-                  <h2 className='font-bold text-sm'>WordPress Developer</h2>
-                  <div className='text-sm'>6/20129 - Present</div>
-                </div>
-                <div className='font-bold text-xl py-2'> SKILLS & TECH</div>
-                <div className='flex py-1'>
-                  <ul className=' list-disc px-8'>
-                    <li>Woocommerce</li>
-                    <li>WordPress</li>
-                    <li>Elementor</li>
-                    <li>DIVI</li>
-                    <li>SEO</li>
-                  </ul>
-                  <ul className=' list-disc ' px-8>
-                    <li>Maintenance</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                  </ul>
-                </div>
-
-                <div className='text-sm py-4'>
-                  Led a 3-person team delivering a product for free, serving 500 users, releasing updates every week on a codebase with more than 4,000 lines of code, a scalable NoSQL database with MVC architecture.
-
-                </div>
-
-              </div>
             </div>
             <div className='flex flex-wrap gap-8  ' id='skills'>
               <div className='border w-full border-white p-4 bg-black_bg border-opacity-30 md:pt-20 lg:flex lg:bg-layout_black'>
@@ -399,17 +411,77 @@ function App () {
             <div className=' w-3 h-3 border-b-4 border-red ' />
             <div className=' w-20 h-3 border-b-4 border-red ' />
           </div>
-          <div className='py-16'>
-            <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-              <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
-            </div>
-            <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
-              Plan upon yet way get cold spot its week. Almost do am or limits hearts.
-              Resolve parties but why she shewing. She sang know now always remembering to the point.”
-            </div>
-            <div className='font-bold text-2xl py-1'>Daranijo Timothy</div>
-            <div className='font-bold text-red text-lg'>CEO theDataPath</div>
+          <div>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false
+              }}
+              // pagination={{
+              //   clickable: true
+              // }}
+              // navigation
+              modules={[Autoplay]}
+              className='mySwiper'
+            >
+              <SwiperSlide>
+                <div className='py-16'>
+                  <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
+                    <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+                  </div>
+                  <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
+                    Plan upon yet way get cold spot its week. Almost do am or limits hearts.
+                    Resolve parties but why she shewing. She sang know now always remembering to the point.”
+                  </div>
+                  <div className='font-bold text-2xl py-1'>Daranijo Timothy</div>
+                  <div className='font-bold text-red text-lg'>CEO theDataPath</div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='py-16'>
+                  <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
+                    <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+                  </div>
+                  <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
+                    Plan upon yet way get cold spot its week. Almost do am or limits hearts.
+                    Resolve parties but why she shewing. She sang know now always remembering to the point.”
+                  </div>
+                  <div className='font-bold text-2xl py-1'>Daranijo Timothy</div>
+                  <div className='font-bold text-red text-lg'>CEO theDataPath</div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='py-16'>
+                  <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
+                    <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+                  </div>
+                  <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
+                    Plan upon yet way get cold spot its week. Almost do am or limits hearts.
+                    Resolve parties but why she shewing. She sang know now always remembering to the point.”
+                  </div>
+                  <div className='font-bold text-2xl py-1'>Daranijo Timothy</div>
+                  <div className='font-bold text-red text-lg'>CEO theDataPath</div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='py-16'>
+                  <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
+                    <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+                  </div>
+                  <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
+                    Plan upon yet way get cold spot its week. Almost do am or limits hearts.
+                    Resolve parties but why she shewing. She sang know now always remembering to the point.”
+                  </div>
+                  <div className='font-bold text-2xl py-1'>Daranijo Timothy</div>
+                  <div className='font-bold text-red text-lg'>CEO theDataPath</div>
+                </div>
+              </SwiperSlide>
+
+            </Swiper>
           </div>
+
         </section>
         {
             // <----------------------------------------------AVAILABLE FOR FREELANCE---------------------------------------------------------->
