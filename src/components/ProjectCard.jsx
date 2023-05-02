@@ -20,7 +20,7 @@ export default function ProjectCard (props) {
   }
   return (
     <div className='md:w-80 md:relative lg:w-96 xl:w-80'>
-      <div onClick={showDetail} onMouseOver={showDetail}><img className='relative' src={`../src/assets/images/${props.imageUrl}.jpeg`} alt='' /></div>
+      <div onClick={showDetail} onMouseOver={showDetail}><img className='relative' src={require(`../src/assets/images/${props.imageUrl}.jpeg`)} alt='' /></div>
       <div className='relative md:absolute md:bottom-0 text-white text-md bg-dark_blue w-full py-3 px-5 bottom-5 projectDetail flex justify-between invisible'>
         <div>
           <div className='opacity-80 font-bold'>{props.title}</div>
