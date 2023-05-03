@@ -19,7 +19,7 @@ export default function SideNav () {
   return (
     <div className='hidden h-screen lg:w-28 xl:w-36 fixed z-40  bg-dark_blue lg:block'>
       <div className='flex flex-col h-screen justify-between my-auto gap-y-7'>
-        <div className='w-full py-4'><img src='../../public/images/logo.svg' className='w-full h-20' /></div>
+        <div className='w-full py-4'><img src='/images/logo.svg' className='w-full h-20' /></div>
         <div className='text-4xl flex flex-col justify-center  my-4'>
           <Link activeClass='active' to='home' spy smooth offset={-70} duration={200}>
             <div className='py-4 flex justify-center border-y-white border-b-2 border-t-2 border-opacity-20 text-xl' onClick={() => setIcon(() => ({ ...initialState, home: true }))}> {icon.home ? 'Home' : <RiHome4Line className='text-4xl' />}</div>

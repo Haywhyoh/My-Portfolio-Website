@@ -29,7 +29,7 @@ export default function Nav () {
     <div className='text-white'>
       <div className='bg-black_bg p-4  flex justify-between items-center fixed w-full z-30 md:p-8 lg:hidden'>
         <div className='text-4xl' onClick={showNav}><FiMenu /> </div>
-        <div><img className=' w-20 text-2xl' src='../src/assets/images/logo.svg' /></div>
+        <div><img className=' w-20 text-2xl' src='/images/logo.svg' /></div>
       </div>
       <div className='fixed z-50 w-full h-screen bg-layout_black2 hidden' id='mobileNav' onClick={hideNav}>
         <div className='w-4/5 bg-white h-full text-black_text font-bold p-5 ps-8 animate__animated md:w-3/5' id='navList'>

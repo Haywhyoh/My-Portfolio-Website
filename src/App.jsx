@@ -429,7 +429,7 @@ function App () {
               <SwiperSlide>
                 <div className='py-16'>
                   <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-                    <img src='../public/images/review.png' className='mx-auto w-60 ' />
+                    <img src='/images/review.png' className='mx-auto w-60 ' />
                   </div>
                   <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
                     Plan upon yet way get cold spot its week. Almost do am or limits hearts.
@@ -442,7 +442,7 @@ function App () {
               <SwiperSlide>
                 <div className='py-16'>
                   <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-                    <img src='../public/images/review.png' className='mx-auto w-60 ' />
+                    <img src='/images/review.png' className='mx-auto w-60 ' />
                   </div>
                   <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
                     Plan upon yet way get cold spot its week. Almost do am or limits hearts.
@@ -455,7 +455,7 @@ function App () {
               <SwiperSlide>
                 <div className='py-16'>
                   <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-                    <img src='../public/images/review.png' className='mx-auto w-60 ' />
+                    <img src='/images/review.png' className='mx-auto w-60 ' />
                   </div>
                   <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
                     Plan upon yet way get cold spot its week. Almost do am or limits hearts.
@@ -468,7 +468,7 @@ function App () {
               <SwiperSlide>
                 <div className='py-16'>
                   <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-                    <img src='../public/images/review.png' className='mx-auto w-60 ' />
+                    <img src='/images/review.png' className='mx-auto w-60 ' />
                   </div>
                   <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
                     Plan upon yet way get cold spot its week. Almost do am or limits hearts.
