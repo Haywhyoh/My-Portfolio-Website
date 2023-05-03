@@ -504,7 +504,7 @@ function App () {
           </div>
           <div className='py-8 md:w-80 md:py-10'>
             <div className='text-left'>
-              <div><img src='public/images/blog1.jpg' className='rounded-xl' /></div>
+              <div><img src='/images/blog1.jpg' className='rounded-xl' /></div>
               <div className='font-bold text-3xl pt-4'> API Testing</div>
               <div className='flex justify-between'>
                 <div className='flex items-center gap-3'>
