@@ -250,7 +250,7 @@ function App () {
             </div>
             <div className=' gap-8 hidden w-full ' id='experience'>
               <div className=' w-full border-opacity-30 md:pt-20 flex flex-col gap-4 lg:flex-row px-4 mx-auto justify-center flex-wrap lg:bg-layout_black'>
-                <div className='w-full flex flex-col lg:flex-row flex-wrap gap-6 justify-center p-4 text-left'>
+                <div className='w-full flex flex-col lg:flex-row flex-wrap gap-6 justify-center text-left'>
                   <div className='w-full lg:w-3/6 xl:w-1/3 bg-layout_black p-4'>
                     <div className='flex justify-between py-2'>
                       <div className='font-extrabold text-2xl'>ALX</div>
@@ -337,7 +337,7 @@ function App () {
                         <li>SEO</li>
                       </ul>
                       <ul className=' list-disc ' px-8>
-                        <li>Maintenance</li>
+                        <li>Duda</li>
                         <li>HTML</li>
                         <li>CSS</li>
                       </ul>
@@ -554,7 +554,7 @@ function App () {
                     />
                   );
                 })}
-                <textarea value='Tell Us About Your Project' rows={10} className='p-4 text-sm bg-layout_black opacity-60' />
+                <textarea value='Tell Us About Your Project' rows={10} className='p-4 text-sm border border-opacity-50 border-white bg-layout_black opacity-60' />
                 <div className='font-bold text-lg md:text-xl flex justify-center'>
                   <button className=' py-2 px-10 lg:px-16 md:px-12 md:py-5 bg-red rounded-full'>Send Message </button>
                 </div>

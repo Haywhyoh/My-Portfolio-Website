@@ -17,12 +17,12 @@ export default function SideNav () {
   const [icon, setIcon] = useState(initialState);
 
   return (
-    <div className='hidden h-screen lg:w-28 xl:w-36 fixed z-40  bg-dark_blue lg:block'>
+    <div className='hidden h-screen lg:w-24 xl:w-28 fixed z-40  bg-dark_blue lg:block'>
       <div className='flex flex-col h-screen justify-between my-auto gap-y-7'>
         <div className='w-full py-4'><img src='/images/logo.svg' className='w-full h-20' /></div>
         <div className='text-4xl flex flex-col justify-center  my-4'>
           <Link activeClass='active' to='home' spy smooth offset={-70} duration={200}>
-            <div className='py-4 flex justify-center border-y-white border-b-2 border-t-2 border-opacity-20 text-xl' onClick={() => setIcon(() => ({ ...initialState, home: true }))}> {icon.home ? 'Home' : <RiHome4Line className='text-4xl' />}</div>
+            <div className='py-4 flex justify-center border-y-white border-b-2 border-t-2 border-opacity-20 text-xl' onClick={() => setIcon(() => ({ ...initialState, home: true }))}> {icon.home ? 'Home' : <RiHome4Line className=' font-normal text-4xl' />}</div>
 
           </Link>
           <Link activeClass='active' to='services' spy smooth offset={100} duration={200}>
