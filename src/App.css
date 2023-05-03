@@ -5,7 +5,7 @@
 }
 
 #app {
-  background-image: url('./assets/images/banner.jpeg');
+  background-image: url('../public/images/banner.jpeg');
 }
 .sub_title {
   text-transform: uppercase;

@@ -3,9 +3,9 @@ import 'animate.css';
 import { useState, useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import Nav from './components/Nav';
-import hand from './assets/images/hand.png';
-import myPic from './assets/images/myPic.png';
-import picBg from './assets/images/7.png';
+import hand from '../public/images/hand.png';
+import myPic from '../public/images/myPic.png';
+import picBg from '../public/images/7.png';
 import Service from './components/Service';
 import ProjectCard from './components/ProjectCard';
 import SideNav from './components/SideNav';
@@ -429,7 +429,7 @@ function App () {
               <SwiperSlide>
                 <div className='py-16'>
                   <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-                    <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+                    <img src='../public/images/review.png' className='mx-auto w-60 ' />
                   </div>
                   <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
                     Plan upon yet way get cold spot its week. Almost do am or limits hearts.
@@ -442,7 +442,7 @@ function App () {
               <SwiperSlide>
                 <div className='py-16'>
                   <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-                    <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+                    <img src='../public/images/review.png' className='mx-auto w-60 ' />
                   </div>
                   <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
                     Plan upon yet way get cold spot its week. Almost do am or limits hearts.
@@ -455,7 +455,7 @@ function App () {
               <SwiperSlide>
                 <div className='py-16'>
                   <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-                    <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+                    <img src='../public/images/review.png' className='mx-auto w-60 ' />
                   </div>
                   <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
                     Plan upon yet way get cold spot its week. Almost do am or limits hearts.
@@ -468,7 +468,7 @@ function App () {
               <SwiperSlide>
                 <div className='py-16'>
                   <div className='relative md:flex md:justify-center rounded-full z-10 overflow-hidden after:absolute after:bg-red after:mx-auto after:left-36 after:content-[""] after:pt-20 after:top-12 after:h-64 after:w-64 after:-z-20 after:-translate-x-1/2 after:rounded-full md:after:left-2/4 md:after:top-16'>
-                    <img src='../src/assets/images/review.png' className='mx-auto w-60 ' />
+                    <img src='../public/images/review.png' className='mx-auto w-60 ' />
                   </div>
                   <div className='font-semibold text-lg opacity-70 py-5 lg:max-w-3xl lg:text-center lg:mx-auto'>“Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite.
                     Plan upon yet way get cold spot its week. Almost do am or limits hearts.
@@ -504,7 +504,7 @@ function App () {
           </div>
           <div className='py-8 md:w-80 md:py-10'>
             <div className='text-left'>
-              <div><img src='../src/assets/images/blog1.jpg' className='rounded-xl' /></div>
+              <div><img src='../public/images/blog1.jpg' className='rounded-xl' /></div>
               <div className='font-bold text-3xl pt-4'> API Testing</div>
               <div className='flex justify-between'>
                 <div className='flex items-center gap-3'>
