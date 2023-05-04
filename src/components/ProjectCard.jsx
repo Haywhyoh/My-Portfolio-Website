@@ -52,29 +52,29 @@ export default function ProjectCard (props) {
           <div>
             <img src='/images/project_bg.jpeg' alt='' />
           </div>
-          <div className=' bg-black_bg'>
+          <div className='flex flex-col bg-black_bg lg-flex-row justify-center gap-3 items-center p-8'>
             <div>
               <div>
-                <div>CLIENT</div>
+                <div className='font-bold text-xl'>CLIENT</div>
                 <div>Personal</div>
               </div>
               <div>
-                <div>DATE</div>
+                <div className='font-bold text-xl'>DATE</div>
                 <div>01, October, 2022</div>
               </div>
 
             </div>
             <div>
               <div>
-                <div>PROJECT TYPE</div>
+                <div className='font-bold text-xl'>PROJECT TYPE</div>
                 <div>API development</div>
               </div>
               <div>
-                <div>LINKS</div>
+                <div className='font-bold text-xl'>LINKS</div>
                 <div>Github <div>github.com</div></div>
                 <div>Live: <div>writeabout.com</div></div>
               </div>
-
+              className='font-bold text-xl'
             </div>
 
           </div>
