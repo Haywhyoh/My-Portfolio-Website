@@ -12,7 +12,7 @@ import SideNav from './components/SideNav';
 import serviceList from './data/services.json';
 import projects from './data/projectCard.json';
 import { SlLocationPin } from 'react-icons/sl';
-import { FaWordpress, FaReact, FaNodeJs, FaPython, FaHeadphonesAlt, FaLinux, FaHtml5, FaCss3Alt, FaBootstrap, FaUserEdit, FaRegCalendarAlt } from 'react-icons/fa';
+import { FaWordpress, FaReact, FaNodeJs, FaPython, FaHeadphonesAlt, FaLinux, FaHtml5, FaCss3Alt, FaBootstrap, FaUserEdit, FaRegCalendarAlt, FaBlog } from 'react-icons/fa';
 import { SiUpwork, SiFiverr, SiFlask, SiMongodb, SiExpress, SiMinutemailer, SiJavascript, SiTypescript, SiNginx, SiMysql, SiPostgresql, SiTailwindcss, SiAmazonaws, SiFigma, SiWix, SiElementor } from 'react-icons/si';
 import FormInput from './components/FormInput';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -24,6 +24,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay } from 'swiper';
+import BlogCard from './components/BlogCard';
 function App () {
   const el = useRef(null);
 
@@ -146,14 +147,14 @@ function App () {
         {
             // <-----------------------------------MY EXPERTISE ------------------------------------------------------------------>
           }
-        <section className='text-center bg-layout_black mt-64 container md:mt-96 lg:mt-20 2xl:mt-40 lg:ps-36' id='services'>
+        <section className='text-center bg-layout_black mt-64 container md:mt-96 lg:my-20 2xl:my-40 lg:ps-36' id='services'>
           <div className='py-4'><h2 className='sub_title font-bold md:text-2xl md:pt-10'>My Expertise</h2></div>
           <div className='py-5'><h2 className=' font-bold text-4xl md:text-6xl'>What I Do</h2></div>
           <div className='flex gap-1 justify-center '>
             <div className=' w-3 border-b-4 opacity-60 border-red ' />
             <div className=' w-20 border-b-4 opacity-60 border-red ' />
           </div>
-          <div className='py-5 md:pt-20'>
+          <div className='py-5 md:py-20'>
             <div className='md:flex md:gap-10 md:flex-wrap xl:gap-4 justify-center'>
               {serviceList.map(service => (
                 <Service
@@ -489,35 +490,24 @@ function App () {
         <section className='container text-center lg:ps-36'>
           <div className='p-4 bg-layout_black lg:p-20'>
             <h2 className='font-bold text-4xl py-3 lg:text-7xl'>I'm Available For Freelance Work</h2>
-            <div className='py-8'><button className='px-8 bg-red py-4 rounded-full text-xl font-bold'>Hire Me Now</button></div>
+            <div className='py-8'><button className='px-8 bg-red py-4 rounded-full text-xl font-bold'> <a href='https://www.upwork.com/freelancers/~01a49b6b5c0e817554' rel='noopener noreferrer' target='_blank'>Hire Me Now</a> </button></div>
           </div>
         </section>
         {
             // <---------------------------------------BLOGS ------------------------------------------------------------------>
           }
-        <section className='container text-center py-5 lg:ps-36'>
+        <section className='container text-center py-5 lg:ps-36 w-full'>
           <div className='sub_title font-bold py-5'>BLOGS</div>
           <div><h2 className=' font-bold text-4xl '>Learn About Softwares</h2></div>
           <div className='flex gap-2 justify-center '>
             <div className=' w-3 h-3 border-b-4 border-red ' />
             <div className=' w-20 h-3 border-b-4 border-red ' />
           </div>
-          <div className='py-8 md:w-80 md:py-10'>
-            <div className='text-left'>
-              <div><img src='/images/blog1.jpg' className='rounded-xl' /></div>
-              <div className='font-bold text-3xl pt-4'> API Testing</div>
-              <div className='flex justify-between'>
-                <div className='flex items-center gap-3'>
-                  <div> <FaUserEdit /> </div>
-                  <div className=''>Adedayo Samuel</div>
-                </div>
-                <div className='flex items-center gap-3'>
-                  <div> <FaRegCalendarAlt /></div>
-                  <div> Jan 3, 2023</div>
-                </div>
-              </div>
+          <div className='py-8 gap-16 my-10 md:py-10 flex justify-center flex-col lg:flex-row flex-wrap w-full mx-auto'>
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
 
-            </div>
           </div>
         </section>
         {
