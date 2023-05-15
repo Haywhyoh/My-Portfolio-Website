@@ -1,0 +1,70 @@
+[
+  {
+    "title": "FreeUdemy",
+    "client": "Case Study",
+    "projectType": "FullStack",
+    "date": "10/2022 - 12/2022",
+    "liveLink": " ",
+    "gitLink": "https://github.com/haywhyoh/FreeUdemy",
+    "description": "This project is a website that scrapes free udemy courses and make it easy to for users to search tjese courses by categories.",
+    "technologies": [ "Node", "Express" ],
+    "thumbnail" : "",
+    "bannerImg": ""
+  },
+  {
+    "client": "",
+    "projectType": "",
+    "date": " ",
+    "liveLink": " ",
+    "gitLink": "",
+    "description": "",
+    "technologies": [ "Node", "Express" ],
+    "thumbnail" : "",
+    "bannerImg": ""
+  },
+  {
+    "client": "",
+    "projectType": "",
+    "date": " ",
+    "liveLink": " ",
+    "gitLink": "",
+    "description": "",
+    "technologies": [ "Node", "Express" ],
+    "thumbnail" : "",
+    "bannerImg": ""
+  },
+  {
+    "client": "",
+    "projectType": "",
+    "date": " ",
+    "liveLink": " ",
+    "gitLink": "",
+    "description": "",
+    "technologies": [ "Node", "Express" ],
+    "thumbnail" : "",
+    "bannerImg": ""
+  },
+  {
+    "client": "",
+    "projectType": "",
+    "date": " ",
+    "liveLink": " ",
+    "gitLink": "",
+    "description": "",
+    "technologies": [ "Node", "Express" ],
+    "thumbnail" : "",
+    "bannerImg": ""
+  },
+  {
+    "client": "",
+    "projectType": "",
+    "date": " ",
+    "liveLink": " ",
+    "gitLink": "",
+    "description": "",
+    "technologies": [ "Node", "Express" ],
+    "thumbnail" : "",
+    "bannerImg": ""
+  },
+  
+]
