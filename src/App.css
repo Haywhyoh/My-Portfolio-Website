@@ -4,9 +4,6 @@
   --bg-gradient: linear-gradient(45deg, var(--color-secondary) 0%, var(--color-primary) 70%);
 }
 
-#app {
-  background-image: url('../public/images/banner.jpeg');
-}
 .sub_title {
   text-transform: uppercase;
   background: var(--bg-gradient);
