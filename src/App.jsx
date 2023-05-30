@@ -126,7 +126,7 @@ function App () {
   return (
     <div>
       <Nav />
-      <div className='pt-36 screen w-full font-body bg-[url("../public/images/banner.jpeg")] bg-cover bg-fixed bg-center text-white lg:relative' id='app'>
+      <div className='pt-36 screen w-full font-body bg-[url("../public/images/banner.jpeg")] bg-auto bg-fixed bg-center text-white lg:relative'>
         <div className='absolute top-0'><SideNav /></div>
         {
             // <------------------------------------------------HOME ------------------------------------------------------------------>
